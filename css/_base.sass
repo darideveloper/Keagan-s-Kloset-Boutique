@@ -1,8 +1,15 @@
-$color_a: #fff
-$color_b: #fff
-$color_c: #fff
-$color_d: #fff
-    
+$color_a: #f6f6f6
+$color_b: #1b191a
+$color_c: #ac2a2c
+$color_d: #70da00
+$color_c_2: #801f22
+$color_d_2: #448300
+$transition-duration: 0.5s
+
+@font-face
+  font-family: "android"
+  src: url("../fonts/Android Insomnia Regular.ttf")
+
 html
     margin: 0
     padding: 0
@@ -10,6 +17,10 @@ html
 body
     margin: 0
     padding: 0
+    background-color: $color_a
+    color: $color_b
+    width: 100vw
+    overflow: hidden
 
 .wrapper-img
     margin: 0
@@ -35,5 +46,12 @@ p
 
 a
     text-decoration: none
-    color: $color_a
-    
+    color: $color_b
+
+.regular-width
+    width: 90%
+    max-width: 1300px
+    margin: 0 auto
+
+.title
+    font-family: "Android", serif

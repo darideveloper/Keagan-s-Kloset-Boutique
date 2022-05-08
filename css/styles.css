@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "android";
+  src: url("../fonts/Android Insomnia Regular.ttf");
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  color: #1b191a;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.wrapper-img {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-img img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  font-size: 18px;
+}
+p.small {
+  font-size: 16px;
+}
+
+.hide {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #1b191a;
+}
+
+.regular-width {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Android", serif;
+}
+
+.header .content {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 700px;
+}
+.header .content .logo {
+  width: 150px;
+  height: auto;
+}
+.header .content .btn.menu {
+  display: none;
+}
+.header .content nav ul {
+  display: flex;
+}
+.header .content nav ul li {
+  list-style: none;
+}
+.header .content nav ul li a {
+  padding: 15px;
+  font-size: 18px;
+  transition-duration: 0.5s;
+  margin-left: 25px;
+  color: #448300;
+}
+.header .content nav ul li a:hover:not(.active) {
+  color: #70da00;
+  font-size: 20px;
+}
+.header .content nav ul li a.active {
+  opacity: 0.5;
+  cursor: default;
+}
+@media screen and (max-width: 650px) {
+  .header .content nav {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    padding: 0 50px;
+    transition-duration: 0.5s;
+    background-color: #f6f6f6;
+    z-index: 1;
+    box-shadow: 0px 0px 14px 2px #ac2a2c;
+  }
+  .header .content nav.active {
+    right: 0px;
+  }
+  .header .content nav ul {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .header .content nav ul li a {
+    margin: 0;
+    font-size: 30px;
+    line-height: 80px;
+  }
+  .header .content nav ul li a:hover:not(.active) {
+    font-size: 32px;
+  }
+  .header .content .btn.menu {
+    display: inline-block;
+    background: none;
+    border: none;
+    transform: rotateZ(-90deg);
+    transition-duration: 0.5s;
+    position: absolute;
+    right: 5vh;
+    z-index: 2;
+  }
+  .header .content .btn.menu.active {
+    transform: rotateZ(90deg);
+  }
+  .header .content .btn.menu svg {
+    width: 72px;
+    height: 72px;
+    fill: rgba(172, 42, 44, 0.5);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

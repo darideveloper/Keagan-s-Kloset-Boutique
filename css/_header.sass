@@ -1,0 +1,88 @@
+.header
+
+    .content
+        padding: 10px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 90%
+        max-width: 700px
+
+        .logo
+            width: 150px
+            height: auto
+        
+        .btn.menu
+            display: none
+        
+        nav ul
+            display: flex
+
+            li
+                list-style: none
+
+                a
+                    padding: 15px
+                    font-size: 18px
+                    transition-duration: $transition-duration
+                    margin-left: 25px
+                    color: $color_d_2
+
+                    &:hover:not(.active)
+                        color: $color_d
+                        font-size: 20px
+
+                    &.active
+                        opacity: 0.5
+                        cursor: default
+
+        @media screen and (max-width: 650px)
+            nav
+                position: absolute
+                top: 0
+                right: -300px
+                height: 100vh
+                padding: 0 50px
+                transition-duration: $transition-duration
+                background-color: $color_a
+                z-index: 1
+                box-shadow: 0px 0px 14px 2px $color_c
+
+                &.active
+                    right: 0px
+
+
+                ul
+                    flex-direction: column
+                    margin: 0
+                    padding: 0
+                    align-items: center
+                    justify-content: center
+                    margin-top: 100px
+
+                    li a
+                        margin: 0
+                        font-size: 30px
+                        line-height: 80px
+
+                        &:hover:not(.active)
+                            font-size: 32px
+
+
+            .btn.menu
+                display: inline-block
+                background: none
+                border: none
+                transform: rotateZ(-90deg)
+                transition-duration: $transition-duration
+                position: absolute
+                right: 5vh
+                z-index: 2
+
+                &.active
+                    transform: rotateZ(90deg)
+
+                svg
+                    width: 72px
+                    height: 72px
+                    fill: rgba($color_c, 0.5)
