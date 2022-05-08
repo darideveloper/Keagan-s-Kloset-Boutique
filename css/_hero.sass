@@ -1,5 +1,4 @@
 .hero
-    position: relative
 
     .content
         display: flex
@@ -35,16 +34,29 @@
     .bg
         position: absolute
         top: 0
-        left: 720px
+        left: 0
+        width: 100vw
+        height: 720px
         z-index: -1
-        margin-top: -150px
+        overflow: hidden
 
         img
-            height: 720px
+            position: absolute
+            top: 0
+            right: calc(-1382px + (100vw - 1300px)/2 + (1300px - 850px) + 130px)
+            height: 100%
             width: auto
             opacity: 0.7
 
-    @media screen and (max-width: 850px)
+    @media screen and (max-width: 1450px)
+        .bg
+            img
+                right: calc(-1382px + (90vw - 850px) + 200px)
+
+
+    @media screen and (max-width: 950px)
+        position: relative
+
         .content
 
             .text
@@ -57,6 +69,10 @@
                 width: 300px
                 opacity: 0.5
 
-
         .bg
             display: none
+
+    @media screen and (max-width: 550px)
+        .content
+            img
+                display: none
