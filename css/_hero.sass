@@ -1,0 +1,62 @@
+.hero
+    position: relative
+
+    .content
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        max-width: 850px
+        margin-top: 50px
+
+        .text
+            width: 60%
+
+            h1
+                margin: 0
+
+            .separator
+                width: 50px
+                height: 5px
+                background-color: $color_b
+                display: inline-block
+                margin: 30px 0
+
+            p
+                margin: 0
+
+            .btn.cta
+                margin-top: 30px
+
+        img
+            width: 30%
+            height: auto
+
+    .bg
+        position: absolute
+        top: 0
+        left: 720px
+        z-index: -1
+        margin-top: -150px
+
+        img
+            height: 720px
+            width: auto
+            opacity: 0.7
+
+    @media screen and (max-width: 850px)
+        .content
+
+            .text
+                width: 100%
+
+            img
+                position: absolute
+                z-index: -1
+                right: 0
+                width: 300px
+                opacity: 0.5
+
+
+        .bg
+            display: none
