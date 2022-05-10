@@ -60,6 +60,7 @@ a {
 
 h1 {
   font-size: 50px;
+  color: #448300;
 }
 
 .header .content {
@@ -228,17 +229,17 @@ h1 {
 }
 
 .btn.cta {
-  background-color: #1b191a;
+  background-color: #801f22;
   color: #f3f3f3;
   padding: 15px 40px;
   display: inline-block;
-  border: 2px solid #1b191a;
+  border: 2px solid #801f22;
   transition-duration: 0.5s;
   font-weight: bold;
 }
 .btn.cta:hover {
   background-color: rgba(27, 25, 26, 0);
-  color: #1b191a;
+  color: #801f22;
 }
 
 /*# sourceMappingURL=styles.css.map */
