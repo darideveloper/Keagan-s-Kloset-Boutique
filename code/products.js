@@ -1,3 +1,7 @@
+const brand_buttons_wrapper = document.querySelector (".buy .buttons.categories")
+const products_wrapper = document.querySelector (".buy .products")
+const show_all_button = document.querySelector(".buy .btn.show-products")
+
 // Get product brands
 let brands = [] 
 for (row of data) {
@@ -8,7 +12,6 @@ for (row of data) {
 }
 
 // Create brand buttons
-let brand_buttons_wrapper = document.querySelector (".buy .buttons.categories")
 for (let brand of brands) {
 
     // Create element
@@ -26,7 +29,6 @@ for (let brand of brands) {
 
 // Create all products
 let products_counter = 0
-let products_wrapper = document.querySelector (".buy .products")
 for (row of data) {
 
     products_counter++
@@ -84,3 +86,42 @@ for (row of data) {
     // Add to wrapper
     products_wrapper.appendChild (product_article)
 }
+
+
+show_all_button.addEventListener ("click", async function (e) {
+    // Show products
+    if (products_wrapper.classList.contains ("collapsed")) {
+        
+        // Remove collapse class from product wrapper
+        products_wrapper.classList.remove ("collapsed")
+
+        // Update show button text
+        show_all_button.innerHTML = "Hide"
+
+        // Make products visible
+        const products = document.querySelectorAll (".buy .products .product")
+        const products_show = Array.from(products).slice (4, products.length)
+        for (product of products_show) {
+            product.classList.remove ("hide")
+        }
+
+
+    // Hide products
+    } else {
+        
+        // Add collapse class from product wrapper
+        products_wrapper.classList.add ("collapsed")
+
+        // Update show button text
+        show_all_button.innerHTML = "Show All"
+
+        // Hide products 
+        const products = document.querySelectorAll (".buy .products .product")
+        const products_hide = Array.from(products).slice (4, products.length)
+        for (product of products_hide) {
+            product.classList.add ("hide")
+        }
+    }
+
+    window.location.href = '#buy';
+})

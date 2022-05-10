@@ -287,6 +287,10 @@ h1 {
 }
 .buy .content .products .product {
   cursor: pointer;
+  opacity: 1;
+}
+.buy .content .products .product.transparent {
+  opacity: 0;
 }
 .buy .content .products .product .wrapper-img {
   position: relative;
