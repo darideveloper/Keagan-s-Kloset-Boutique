@@ -1,5 +1,5 @@
 const data = [
-    // Code, brand, product, price, image, sizes
+    // Code, brand, name, price, image, sizes
     ["k001","Pete & Lucy","short sleeve dress",28.00,"k001.png", ["S", "M", "L"]],
     ["k002","Pete & Lucy","2 piece set",30.00,"k002.png", []],
     ["k003","Pete & Lucy","short sleeve dress",28.00,"k003.png", []],
