@@ -23,3 +23,28 @@ const data = [
     ["kal008","AnnLoren","dress/legging set",38.00,"kal008.jpeg", []]
 ]
 
+function get_products_all () {
+    return data
+}
+
+function get_products_brand (brand="") {
+    let valid_products = [] 
+    for (let product of data) {
+        if (product[1] == brand) {
+            valid_products.push (product)
+        }
+    }
+    return valid_products
+}
+
+function get_brands () {
+    // Get product brands
+    let brands = [] 
+    for (row of data) {
+        let brand =  row[1]
+        if (! brands.includes (brand)) {
+            brands.push (brand)
+        }
+    }
+    return brands 
+}
