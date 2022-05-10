@@ -15,7 +15,7 @@
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="svg-arrow" class="svg_elem" viewBox="0 0 24 24">
-            <path d="m18.787 9.473s-4.505-4.502-6.259-6.255c-.147-.146-.339-.22-.53-.22-.192 0-.384.074-.531.22-1.753 1.753-6.256 6.252-6.256 6.252-.147.147-.219.339-.217.532.001.19.075.38.221.525.292.293.766.295 1.056.004l4.977-4.976v14.692c0 .414.336.75.75.75.413 0 .75-.336.75-.75v-14.692l4.978 4.978c.289.29.762.287 1.055-.006.145-.145.219-.335.221-.525.002-.192-.07-.384-.215-.529z" fill-rule="nonzero"/>
+            <path d="m9.474 5.209s-4.501 4.505-6.254 6.259c-.147.146-.22.338-.22.53s.073.384.22.53c1.752 1.754 6.252 6.257 6.252 6.257.145.145.336.217.527.217.191-.001.383-.074.53-.221.293-.293.294-.766.004-1.057l-4.976-4.976h14.692c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-14.692l4.978-4.979c.289-.289.287-.761-.006-1.054-.147-.147-.339-.221-.53-.221-.191-.001-.38.071-.525.215z" fill-rule="nonzero"/>
         </symbol>
     </svg>
 
@@ -26,9 +26,9 @@
             </a>
             <nav class="">
                 <ul>
-                    <li><a href="." class="active">Inicio</a></li>
-                    <li><a href="#buy" class="">Comprar</a></li>
-                    <li><a href="#contact" class="">Contacto</a></li>
+                    <li><a href="." class="active">Home </a></li>
+                    <li><a href="#buy" class="">Buy</a></li>
+                    <li><a href="#contact" class="">Contact</a></li>
                 </ul>
             </nav>
             <button class="btn menu">
@@ -65,7 +65,57 @@
         </section>
 
         <section class="buy" id="buy">
+            <div class="content regular-width">
 
+                <div class="buttons categories">
+                    <button class="btn category all active">ALL</button>
+                    <button class="btn category pete_&_lucy">Pete & Lucy</button>
+                    <button class="btn category annloren">AnnLoren</button>
+                </div>
+                <section class="products collapsed">
+                    <article class="product">
+                        <div class="wrapper-img">
+                            <img src="imgs/products/k001.png" alt="product image: k001  Pete & Lucy short sleeve dress">
+                            <p class="buy-now btn cta">Buy Now</p>
+                        </div>
+                        <p class="details code">k001</p>
+                        <p class="details name">Short Sleeve Dress (Pete & Lucy)</p>
+                        <p class="details price">28.00 USD</p>
+                    </article>
+    
+                    <article class="product">
+                        <div class="wrapper-img">
+                            <img src="imgs/products/k001.png" alt="product image: k001  Pete & Lucy short sleeve dress">
+                            <p class="buy-now btn cta">Buy Now</p>
+                        </div>
+                        <p class="details code">k001</p>
+                        <p class="details name">Short Sleeve Dress (Pete & Lucy)</p>
+                        <p class="details price">28.00 USD</p>
+                    </article>
+
+                    <article class="product">
+                        <div class="wrapper-img">
+                            <img src="imgs/products/k001.png" alt="product image: k001  Pete & Lucy short sleeve dress">
+                            <p class="buy-now btn cta">Buy Now</p>
+                        </div>
+                        <p class="details code">k001</p>
+                        <p class="details name">Short Sleeve Dress (Pete & Lucy)</p>
+                        <p class="details price">28.00 USD</p>
+                    </article>
+
+                    <article class="product">
+                        <div class="wrapper-img">
+                            <img src="imgs/products/k001.png" alt="product image: k001  Pete & Lucy short sleeve dress">
+                            <p class="buy-now btn cta">Buy Now</p>
+                        </div>
+                        <p class="details code">k001</p>
+                        <p class="details name">Short Sleeve Dress (Pete & Lucy)</p>
+                        <p class="details price">28.00 USD</p>
+                    </article>
+    
+                </section>
+                <button class="btn show-products cta">Show All</button>
+            </div>
         </section>
 
         <section class="offers" id="offers">
@@ -86,6 +136,7 @@
     </footer>
 
     <script type="text/javascript" src="code/header.js"></script>
+    <script type="text/javascript" src="code/data.js"></script>
 
     <!-- Aos imports -->
     <!-- <script type="text/javascript" src="code/aos.js"></script> -->

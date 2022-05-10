@@ -1,0 +1,94 @@
+.buy
+    background-color: white
+    margin-top: 100px
+    padding-top: 80px
+    
+    .content
+        display: flex 
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+        .buttons
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            margin-bottom: 30px
+            width: 100%
+
+            button
+                margin-right: 30px
+
+        .products
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-template-rows: 1fr
+            gap: 30px
+
+            .product
+                cursor: pointer
+
+                .wrapper-img
+                    position: relative
+                    width: 100%
+                    height: auto
+                    overflow: hidden
+                    
+                    img
+                        transition-duration: $transition-duration
+
+                    .buy-now
+                        position: absolute
+                        text-align: center
+                        width: 40%
+                        opacity: 0
+
+                &:hover
+                    .wrapper-img             
+                        img
+                            opacity: 0.3
+
+                        .buy-now
+                            opacity: 1
+
+                p.details
+                    margin: 0
+                    padding: 0
+                    
+                    &.code
+                        font-size: 14px
+                        font-style: italic
+                        margin-top: 15px
+
+                    &.name
+                        font-size: 18px
+                        margin-top: 8px
+                    
+                    &.price
+                        font-size: 16px
+                        font-weight: bold
+                        margin-top: 8px
+
+        .btn.show-products
+            width: 200px
+            margin-top: 50px
+
+        @media screen and (max-width: 1000px)
+            .products
+                grid-template-columns: repeat(3, 1fr)
+
+                &.collapsed
+                    .product:nth-child(4)
+                        display: none
+
+        @media screen and (max-width: 800px)
+            .products
+                grid-template-columns: repeat(2, 1fr)
+
+                &.collapsed
+                    .product:nth-child(4)
+                        display: block
+
+        @media screen and (max-width: 500px)
+            .products
+                grid-template-columns: repeat(1, 1fr)

@@ -1,4 +1,6 @@
 .btn
+    cursor: pointer
+
     &.cta
         background-color: $color_c_2
         color: $color_a
@@ -7,7 +9,22 @@
         border: 2px solid $color_c_2
         transition-duration: $transition-duration
         font-weight: bold
-
+        font-size: 18px
+        
         &:hover
             background-color: rgba($color_b, 0)
             color: $color_c_2
+            
+
+    &.category
+        background: none
+        border: none
+        border-bottom: 4px solid rgba($color_d_2, 0)
+        color: $color_d_2
+        transition-duration: $transition-duration
+
+        &.active
+            border-bottom: 4px solid $color_d_2
+        
+        &:hover:not(.active)
+            border-bottom: 4px solid rgba($color_d_2, 0.5)
