@@ -25,8 +25,11 @@ for (let brand of brands) {
 }
 
 // Create all products
+let products_counter = 0
 let products_wrapper = document.querySelector (".buy .products")
 for (row of data) {
+
+    products_counter++
 
     // Get data from row
     let row_code = row[0]
@@ -64,6 +67,11 @@ for (row of data) {
     product_price.innerHTML = row_price
     product_price.classList.add ("details")
     product_price.classList.add ("price")
+
+    // Show only first four products
+    if (products_counter > 4) {
+        product_article.classList.add ("hide")
+    }
 
     // Nest elements
     product_wrapper_img.appendChild (product_img)
