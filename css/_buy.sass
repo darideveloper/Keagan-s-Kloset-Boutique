@@ -19,11 +19,22 @@
             button
                 margin-right: 30px
 
+            img.loading
+                width: 30px
+                height: auto
+
         .products
             display: grid
             grid-template-columns: repeat(4, 1fr)
             grid-template-rows: 1fr
             gap: 50px
+
+            img.loading
+                margin: 0 auto
+                display: block
+                grid-column: 1/5
+                width: 100px 
+                height: auto 
 
             .product
                 cursor: pointer

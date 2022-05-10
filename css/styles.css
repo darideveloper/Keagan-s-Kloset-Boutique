@@ -279,11 +279,22 @@ h1 {
 .buy .content .buttons button {
   margin-right: 30px;
 }
+.buy .content .buttons img.loading {
+  width: 30px;
+  height: auto;
+}
 .buy .content .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   gap: 50px;
+}
+.buy .content .products img.loading {
+  margin: 0 auto;
+  display: block;
+  grid-column: 1/5;
+  width: 100px;
+  height: auto;
 }
 .buy .content .products .product {
   cursor: pointer;

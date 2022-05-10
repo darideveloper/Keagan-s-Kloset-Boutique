@@ -23,21 +23,23 @@ const data = [
     ["kal008","AnnLoren","dress/legging set",38.00,"kal008.jpeg", []]
 ]
 
-function get_products_all () {
+async function get_products_all () {
+    await sleep (1)
     return data
 }
 
-function get_products_brand (brand="") {
+async function get_products_brand (brand="") {
     let valid_products = [] 
     for (let product of data) {
         if (product[1] == brand) {
             valid_products.push (product)
         }
     }
+    await sleep (1)
     return valid_products
 }
 
-function get_brands () {
+async function get_brands () {
     // Get product brands
     let brands = [] 
     for (row of data) {
@@ -46,5 +48,6 @@ function get_brands () {
             brands.push (brand)
         }
     }
+    await sleep (1)
     return brands 
 }
