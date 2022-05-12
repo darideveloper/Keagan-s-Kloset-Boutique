@@ -296,6 +296,20 @@ h1 {
   width: 100px;
   height: auto;
 }
+.buy .content .products .brand {
+  grid-column: 1/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.buy .content .products .brand img {
+  width: 200px;
+  height: auto;
+}
+.buy .content .products .brand p {
+  width: 80%;
+}
 .buy .content .products .product {
   cursor: pointer;
   opacity: 1;

@@ -23,6 +23,17 @@ const data = [
     ["kal008","AnnLoren","dress/legging set",38.00,"kal008.jpeg", []]
 ]
 
+const brands = {
+    "Pete & Lucy": {
+        "details": "Pete + Lucy is not your traditional clothing line. The styles produced are only printed in limited runs.Less than 1,000 of each outfit will ever be made! This makes each and every item a hot commodity! They're high quality, super soft, and super adorable. Every week new patterns are released. Be sure to visit us on FB every weekend to take a look at new releases and place your orders!",
+        "img": "pete_lucy.png"
+    },
+    "AnnLoren": {
+        "details": "AnnLoren designs consist of unique, yet modern-trendy styles for girls as young as 6 months & all the way up to 14 years old! If you seek high-end styles at great prices, look no farther! Designer Girls and Dolls clothing that is affordable and stylish. Designed by twin sisters who are also moms!",
+        "img": "annloren.png"
+    }
+}
+
 async function get_products_all () {
     await sleep (1)
     return data

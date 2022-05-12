@@ -92,6 +92,27 @@ async function create_products (brand="") {
         var products = await get_products_all ()
     } else {
         var products = await get_products_brand(brand)
+
+        // Get brand data 
+        let brand_details = brands[brand]["details"]
+        let brand_img = brands[brand]["img"]
+
+        // Create brand tags      
+        let brand_img_elem = document.createElement("img")
+        brand_img_elem.setAttribute ("src", "imgs/brands/" + brand_img)
+        brand_img_elem.setAttribute ("alt", brand + " logo")
+
+        let brand_details_elem = document.createElement("p")
+        brand_details_elem.innerHTML = brand_details
+        
+        // Add elements in brand wrapper
+        let brand_wrapper = document.createElement("div")
+        brand_wrapper.classList.add ("brand")
+        brand_wrapper.appendChild (brand_img_elem)
+        brand_wrapper.appendChild (brand_details_elem)
+
+        // Add brand tags to grid 
+        products_wrapper.appendChild(brand_wrapper)
     }
 
     // Hide loading icon
