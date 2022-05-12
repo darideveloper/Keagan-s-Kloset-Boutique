@@ -155,7 +155,7 @@ async function create_products (brand="") {
         product_name.innerHTML = row_name + " (" + row_brand + ")"
         product_name.classList.add ("details")
         product_name.classList.add ("name")
-        product_price.innerHTML = row_price
+        product_price.innerHTML = row_price + " USD"
         product_price.classList.add ("details")
         product_price.classList.add ("price")
     
