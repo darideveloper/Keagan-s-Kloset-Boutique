@@ -28,3 +28,19 @@
         
         &:hover:not(.active)
             border-bottom: 4px solid rgba($color_d_2, 0.5)
+
+    &.cta-link
+        background: none
+        border: none
+
+        svg
+            transition-duration: $transition-duration
+
+        &:hover
+            p
+                text-decoration: underline
+
+            svg
+                width: 35px !important
+                height: 35px !important
+                transform: rotateZ(270deg) !important

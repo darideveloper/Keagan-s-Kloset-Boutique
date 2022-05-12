@@ -1,0 +1,107 @@
+.best
+    .products
+        width: 80%
+        margin: 0 auto
+
+        .product
+            display: flex
+            align-items: center
+
+            .wrapper-img
+                background-color: $color_a
+
+                img
+                    width: 300px
+                    height: auto
+                    opacity: 0.8
+
+            .details
+
+                h2
+                    font-size: 30px
+                    text-transform: capitalize
+                    margin-bottom: 0
+                    padding: 0 20px
+
+
+                    & + p
+                        margin: 0
+                        padding: 0 20px
+
+                
+                button
+                    display: inline-block
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+                    margin: 25px 0
+                    padding: 0 20px
+
+                    p
+                        line-height: 15px
+
+
+                    svg
+                        width: 30px 
+                        height: 30px
+                        transform: rotateZ(180deg)
+                        margin-left: 30px
+
+            &:nth-child(1)
+                justify-content: flex-start
+
+                .wrapper-img
+                    width: 55%
+                    
+                .details
+                    margin-left: -120px
+
+            &:nth-child(2)
+                justify-content: flex-end
+                margin-top: -50px
+
+                .wrapper-img
+                    width: 40%
+                    order: 1
+
+        @media screen and (max-width: 1300px)
+            width: 100%
+
+        @media screen and (max-width: 1100px)
+            .product
+
+                &:nth-child(1), &:nth-child(2)
+                    .wrapper-img
+                        width: auto
+                        img
+                            margin: 0 50px
+
+                &:nth-child(1)
+
+                    .details
+                        margin-left: 0
+
+        @media screen and (max-width: 900px)
+            .product
+                &:nth-child(2)
+                    margin-top: 20px
+
+        @media screen and (max-width: 670px)
+            .product
+                flex-direction: column
+
+                &:nth-child(2)
+                    .wrapper-img
+                        order: 0
+
+        @media screen and (max-width: 450px)
+            .product
+                width: 90% 
+                margin: 0 auto
+
+                &:nth-child(1), &:nth-child(2)
+                    .wrapper-img
+                        img
+                            margin: 0
+                            width: 100%
+                            height: auto
