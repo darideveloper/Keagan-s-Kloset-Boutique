@@ -63,6 +63,13 @@ h1 {
   color: #448300;
 }
 
+.paralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .header .content {
   padding: 10px;
   display: flex;
@@ -259,9 +266,10 @@ h1 {
 }
 
 .buy {
-  background-color: white;
+  background-color: #f3f3f3;
   margin-top: 100px;
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 .buy .content {
   display: flex;
@@ -379,6 +387,44 @@ h1 {
 @media screen and (max-width: 500px) {
   .buy .content .products {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.new-brands {
+  background-color: #f3f3f3;
+  position: relative;
+}
+.new-brands .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+  margin-top: 50px;
+  color: #f3f3f3;
+  right: 0;
+  left: 0;
+  font-size: 30px;
+}
+.new-brands .text h2, .new-brands .text p {
+  padding: 0 20px;
+}
+.new-brands .paralax-wrapper {
+  background-color: #1b191a;
+}
+.new-brands .paralax-wrapper .paralax {
+  background-image: url("../imgs/girl-outside.jpg");
+  height: 300px;
+  opacity: 0.5;
+}
+@media screen and (max-width: 750px) {
+  .new-brands .paralax-wrapper .paralax {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .new-brands .paralax-wrapper .paralax {
+    height: 500px;
   }
 }
 

@@ -1,0 +1,36 @@
+.new-brands
+    background-color: $color_a 
+    position: relative
+
+    .text
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        text-align: center
+        margin-top: 50px
+        color: $color_a
+        right: 0
+        left: 0
+        font-size: 30px
+
+        h2, p
+            padding: 0 20px
+
+    .paralax-wrapper
+        background-color: $color_b
+
+        .paralax
+            background-image: url("../imgs/girl-outside.jpg")
+            height: 300px
+            opacity: 0.5
+
+    @media screen and (max-width: 750px)
+        .paralax-wrapper
+            .paralax
+                height: 400px
+
+    @media screen and (max-width: 480px)
+        .paralax-wrapper
+            .paralax
+                height: 500px
