@@ -5,14 +5,13 @@
 html {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #f3f3f3;
-  color: #1b191a;
+  background-color: #FBF8F1;
+  color: #a09587;
   width: 100%;
   overflow-x: hidden;
   font-family: "Fira Sans", sans-serif;
@@ -45,7 +44,7 @@ p.small {
 
 a {
   text-decoration: none;
-  color: #1b191a;
+  color: #a09587;
   cursor: pointer;
 }
 
@@ -55,13 +54,16 @@ a {
   margin: 0 auto;
 }
 
-.title, h1, h2, h3, h4, h5, h6, .btn, input {
+.title, h1, h2, h3, h4, h5, h6, .btn {
   font-family: "Android", serif;
+}
+
+h1, h2, h3 {
+  color: #54BAB9;
 }
 
 h1 {
   font-size: 50px;
-  color: #448300;
 }
 
 h2 {
@@ -80,7 +82,7 @@ h2 {
 }
 
 .color-a {
-  background-color: #f3f3f3;
+  background-color: #FBF8F1;
 }
 
 .header .content {
@@ -109,10 +111,10 @@ h2 {
   font-size: 18px;
   transition-duration: 0.5s;
   margin-left: 25px;
-  color: #448300;
+  color: #54BAB9;
 }
 .header .content nav ul li a:hover:not(.active) {
-  color: #70da00;
+  color: #54BAB9;
   font-size: 20px;
 }
 .header .content nav ul li a.active {
@@ -127,9 +129,9 @@ h2 {
     height: 100vh;
     padding: 0 50px;
     transition-duration: 0.5s;
-    background-color: #f3f3f3;
+    background-color: #FBF8F1;
     z-index: 1;
-    box-shadow: 0px 0px 14px 2px #ac2a2c;
+    box-shadow: 0px 0px 14px 2px #9c8860;
   }
   .header .content nav.active {
     right: 0px;
@@ -166,7 +168,7 @@ h2 {
   .header .content .btn.menu svg {
     width: 72px;
     height: 72px;
-    fill: rgba(172, 42, 44, 0.5);
+    fill: rgba(156, 136, 96, 0.5);
   }
 }
 
@@ -187,7 +189,7 @@ h2 {
 .hero .content .text .separator {
   width: 50px;
   height: 5px;
-  background-color: #1b191a;
+  background-color: #a09587;
   display: inline-block;
   margin: 30px 0;
 }
@@ -248,16 +250,17 @@ h2 {
 }
 
 #footer {
-  background-color: rgba(68, 131, 0, 0.4);
-  color: rgba(27, 25, 26, 0.8);
+  background-color: #54bab9;
+  color: white;
 }
-#footer a, #footer p {
+#footer a, #footer p, #footer h3 {
   font-size: 14px;
-  color: rgba(27, 25, 26, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 #footer a {
   margin-top: 10px;
   display: inline-block;
+  style: normal;
 }
 #footer a:hover {
   opacity: 0.5;
@@ -298,6 +301,9 @@ h2 {
   display: block;
   text-align: center;
 }
+#footer .content .widgets .widget.contact address {
+  font-style: normal;
+}
 #footer .content .widgets .widget.contact .socials {
   display: flex;
   align-items: center;
@@ -308,7 +314,7 @@ h2 {
   padding: 20px 0;
   margin: 0;
   display: block;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 #footer small p, #footer small a {
   font-size: 12px;
@@ -348,29 +354,29 @@ h2 {
   border: none;
 }
 .btn.cta {
-  background-color: #801f22;
-  color: #f3f3f3;
+  background-color: #9c8860;
+  color: #FBF8F1;
   padding: 15px 40px;
   display: inline-block;
-  border: 2px solid #801f22;
+  border: 2px solid #9c8860;
   transition-duration: 0.5s;
   font-weight: bold;
   font-size: 18px;
 }
 .btn.cta:hover {
-  background-color: rgba(27, 25, 26, 0);
-  color: #801f22;
+  background-color: rgba(160, 149, 135, 0);
+  color: #9c8860;
 }
 .btn.category {
-  border-bottom: 4px solid rgba(68, 131, 0, 0);
-  color: #448300;
+  border-bottom: 4px solid rgba(84, 186, 185, 0);
+  color: #54BAB9;
   transition-duration: 0.5s;
 }
 .btn.category.active {
-  border-bottom: 4px solid #448300;
+  border-bottom: 4px solid #54BAB9;
 }
 .btn.category:hover:not(.active) {
-  border-bottom: 4px solid rgba(68, 131, 0, 0.5);
+  border-bottom: 4px solid rgba(84, 186, 185, 0.5);
 }
 .btn.cta-link svg {
   width: 30px;
@@ -407,7 +413,7 @@ h2 {
   padding: 10px 20px;
 }
 .btn.social svg {
-  fill: #1b191a;
+  fill: white;
   width: 15px;
   height: 15px;
 }
@@ -559,7 +565,7 @@ h2 {
   z-index: 1;
   text-align: center;
   margin-top: 50px;
-  color: #f3f3f3;
+  color: #FBF8F1;
   right: 0;
   left: 0;
   font-size: 30px;
@@ -567,8 +573,12 @@ h2 {
 .new-brands .text h2, .new-brands .text p {
   padding: 0 20px;
 }
+.new-brands .text h2 {
+  background-color: rgba(156, 136, 96, 0.5);
+  color: white;
+}
 .new-brands .paralax-wrapper {
-  background-color: #1b191a;
+  background-color: #a09587;
 }
 .new-brands .paralax-wrapper .paralax {
   background-image: url("../imgs/girl-outside.jpg");
@@ -608,7 +618,7 @@ h2 {
   align-items: center;
 }
 .best .products .product .wrapper-img {
-  background-color: #f3f3f3;
+  background-color: #FBF8F1;
 }
 .best .products .product .wrapper-img img {
   width: 300px;
@@ -843,12 +853,12 @@ h2 {
   font-size: 18px;
   padding: 15px 40px;
   margin: 0;
-  border: 2px solid #801f22;
+  border: 2px solid #9c8860;
   transition-duration: 0.0625s;
 }
 .register .content form input:focus {
   outline: none;
-  border: 4px solid #801f22;
+  border: 4px solid #9c8860;
   padding: 13px 38px;
 }
 .register .content .thanks {
