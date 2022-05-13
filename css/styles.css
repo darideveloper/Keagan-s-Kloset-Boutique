@@ -118,7 +118,7 @@ h2 {
   opacity: 0.5;
   cursor: default;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
   .header .content nav {
     position: fixed;
     top: 0;
