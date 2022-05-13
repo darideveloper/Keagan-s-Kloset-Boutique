@@ -3,6 +3,7 @@ const products_wrapper = document.querySelector (".buy .products")
 const show_all_button = document.querySelector(".buy .btn.show-products")
 const loading_buttons = document.querySelector(".buy .buttons img.loading")
 const loading_products = document.querySelector(".buy .products img.loading")
+const brand_wrapper = document.querySelector(".buy .brand-wrapper")
 
 var brand_buttons = []
 
@@ -91,6 +92,9 @@ async function create_products (brand="") {
     if (brand == "") {
         var products = await get_products_all ()
     } else {
+        // Delete last brand data
+        brand_wrapper.innerHTML = ""
+
         var products = await get_products_brand(brand)
 
         // Get brand data 
@@ -105,14 +109,14 @@ async function create_products (brand="") {
         let brand_details_elem = document.createElement("p")
         brand_details_elem.innerHTML = brand_details
         
-        // Add elements in brand wrapper
-        let brand_wrapper = document.createElement("div")
-        brand_wrapper.classList.add ("brand")
-        brand_wrapper.appendChild (brand_img_elem)
-        brand_wrapper.appendChild (brand_details_elem)
+        // Add elements in brand tag
+        let brand_elem = document.createElement("div")
+        brand_elem.classList.add ("brand")
+        brand_elem.appendChild (brand_img_elem)
+        brand_elem.appendChild (brand_details_elem)
 
         // Add brand tags to grid 
-        products_wrapper.appendChild(brand_wrapper)
+        brand_wrapper.appendChild(brand_elem)
     }
 
     // Hide loading icon

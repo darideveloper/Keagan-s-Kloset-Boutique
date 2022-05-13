@@ -2,6 +2,21 @@
     margin-top: 100px
     padding-top: 80px
     padding-bottom: 100px
+
+    .brand-wrapper
+        .brand
+            display: flex 
+            align-items: center
+            justify-content: center
+            flex-direction: column
+
+            img
+                width: 200px
+                height: auto 
+
+            p
+                width: 100%
+
     
     .content
         display: flex 
@@ -35,20 +50,6 @@
                 grid-column: 1/5
                 width: 100px 
                 height: auto
-
-            .brand
-                grid-column: 1/5
-                display: flex 
-                align-items: center
-                justify-content: center
-                flex-direction: column
-
-                img
-                    width: 200px
-                    height: auto 
-
-                p
-                    width: 80%
 
 
             .product
@@ -104,7 +105,8 @@
             width: 200px
             margin-top: 50px
 
-        @media screen and (max-width: 1000px)
+    @media screen and (max-width: 1000px)
+        .content
             .products
                 grid-template-columns: repeat(3, 1fr)
 
@@ -112,7 +114,8 @@
                     .product:nth-child(4)
                         display: none
 
-        @media screen and (max-width: 800px)
+    @media screen and (max-width: 800px)
+        .content
             .products
                 grid-template-columns: repeat(2, 1fr)
 
@@ -120,6 +123,16 @@
                     .product:nth-child(4)
                         display: block
 
-        @media screen and (max-width: 500px)
+    @media screen and (max-width: 500px)
+        .content
             .products
                 grid-template-columns: repeat(1, 1fr)
+
+    @media screen and (max-width: 400px)
+        .content 
+            .buttons
+                flex-direction: column
+
+                button
+                    margin: 0
+                    margin-bottom: 15px
