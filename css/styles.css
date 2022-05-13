@@ -248,12 +248,12 @@ h2 {
 }
 
 #footer {
-  background-color: #1b191a;
-  color: rgba(243, 243, 243, 0.8);
+  background-color: rgba(68, 131, 0, 0.4);
+  color: rgba(27, 25, 26, 0.8);
 }
 #footer a, #footer p {
   font-size: 14px;
-  color: rgba(243, 243, 243, 0.8);
+  color: rgba(27, 25, 26, 0.8);
 }
 #footer a {
   margin-top: 10px;
@@ -407,7 +407,7 @@ h2 {
   padding: 10px 20px;
 }
 .btn.social svg {
-  fill: #f3f3f3;
+  fill: #1b191a;
   width: 15px;
   height: 15px;
 }
