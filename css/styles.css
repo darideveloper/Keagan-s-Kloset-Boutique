@@ -585,7 +585,7 @@ h1 {
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: calc(100% - 100px);
 }
 .testimonials .buttons button {
   position: absolute;
@@ -618,9 +618,14 @@ h1 {
   width: 80%;
   padding: 50px 0;
   margin: auto;
+  transition-duration: 0.5s;
+  transition-property: opacity;
 }
 .testimonials .content article.active {
   display: flex;
+}
+.testimonials .content article.transparent {
+  opacity: 0;
 }
 .testimonials .content article .titles {
   width: 250px;
