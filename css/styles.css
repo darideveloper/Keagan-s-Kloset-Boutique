@@ -248,6 +248,17 @@ h2 {
     display: none;
   }
 }
+@media screen and (max-width: 550px) {
+  .hero .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .hero .content .text .btn.cta.phantom {
+    margin-top: 10px;
+  }
+}
 
 #footer {
   background-color: #54bab9;
@@ -366,6 +377,15 @@ h2 {
 .btn.cta:hover {
   background-color: rgba(160, 149, 135, 0);
   color: #9c8860;
+}
+.btn.cta.phantom {
+  background-color: rgba(160, 149, 135, 0);
+  color: #9c8860;
+}
+.btn.cta.phantom:hover {
+  color: #FBF8F1;
+  background-color: #9c8860;
+  border: 2px solid #9c8860;
 }
 .btn.category {
   border-bottom: 4px solid rgba(84, 186, 185, 0);
