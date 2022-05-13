@@ -54,13 +54,17 @@ a {
   margin: 0 auto;
 }
 
-.title, h1, h2, h3, h4, h5, h6, .btn {
+.title, h1, h2, h3, h4, h5, h6, .btn, input {
   font-family: "Android", serif;
 }
 
 h1 {
   font-size: 50px;
   color: #448300;
+}
+
+h2 {
+  font-size: 45px;
 }
 
 .paralax {
@@ -72,6 +76,10 @@ h1 {
 
 .white {
   background-color: white;
+}
+
+.color-a {
+  background-color: #f3f3f3;
 }
 
 .header .content {
@@ -576,7 +584,6 @@ h1 {
 }
 
 .testimonials {
-  background-color: white;
   position: relative;
   padding-bottom: 100px;
 }
@@ -606,9 +613,6 @@ h1 {
 }
 .testimonials .buttons button.next svg {
   transform: rotateZ(90deg);
-}
-.testimonials .content {
-  background-color: #f3f3f3;
 }
 .testimonials .content article {
   display: none;
@@ -698,6 +702,47 @@ h1 {
   }
   .testimonials .content article .wrapper-img {
     position: initial;
+  }
+}
+
+.register .content {
+  padding-bottom: 100px;
+  text-align: center;
+}
+.register .content h2, .register .content p {
+  display: inline-block;
+}
+.register .content h2 {
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+.register .content form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.register .content form input {
+  font-size: 18px;
+  padding: 15px 40px;
+  margin: 0;
+  border: 2px solid #801f22;
+  transition-duration: 0.0625s;
+}
+.register .content form input:focus {
+  outline: none;
+  border: 4px solid #801f22;
+  padding: 13px 38px;
+}
+.register .content .thanks {
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  .register .content form {
+    flex-direction: column;
+  }
+  .register .content form input {
+    width: calc(90% - 80px);
   }
 }
 
