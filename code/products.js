@@ -42,7 +42,7 @@ async function create_buttons () {
         brand_buttons_wrapper.appendChild (brand_button)
     
         // Add events listener for each button
-        brand_button.addEventListener("click", async function (e) {
+                            .addEventListener("click", async function (e) {
 
             // Get brand name
             let brand = e.target.innerHTML
@@ -69,9 +69,6 @@ async function create_buttons () {
             show_all_button.innerHTML = "Show All"
 
             // Show new products
-            if (brand == "ALL") {
-                brand = ""
-            }
             brand = brand.replace("&amp;", "&")
             await create_products (brand)
 
@@ -83,41 +80,45 @@ async function create_buttons () {
 
 create_buttons () 
 
-async function create_products (brand="") {
+async function create_products (brand="ALL") {
 
     // Create all products
     let products_counter = 0
+
+    // Delete last brand data
+    brand_wrapper.innerHTML = ""
     
     // get products from fake api
-    if (brand == "") {
+    if (brand == "ALL") {
         var products = await get_products_all ()
     } else {
-        // Delete last brand data
-        brand_wrapper.innerHTML = ""
-
         var products = await get_products_brand(brand)
+    }
 
-        // Get brand data 
-        let brand_details = brands[brand]["details"]
-        let brand_img = brands[brand]["img"]
+    // Get brand data 
+    let brand_details = brands[brand]["details"]
+    let brand_img = brands[brand]["img"]
 
-        // Create brand tags      
-        let brand_img_elem = document.createElement("img")
+    // Create brand tags    
+    if (brand_img) {
+        var brand_img_elem = document.createElement("img")
         brand_img_elem.setAttribute ("src", "imgs/brands/" + brand_img)
         brand_img_elem.setAttribute ("alt", brand + " logo")
-
-        let brand_details_elem = document.createElement("p")
-        brand_details_elem.innerHTML = brand_details
-        
-        // Add elements in brand tag
-        let brand_elem = document.createElement("div")
-        brand_elem.classList.add ("brand")
-        brand_elem.appendChild (brand_img_elem)
-        brand_elem.appendChild (brand_details_elem)
-
-        // Add brand tags to grid 
-        brand_wrapper.appendChild(brand_elem)
     }
+
+    let brand_details_elem = document.createElement("p")
+    brand_details_elem.innerHTML = brand_details
+    
+    // Add elements in brand tag
+    let brand_elem = document.createElement("div")
+    brand_elem.classList.add ("brand")
+    if (brand_img) {
+        brand_elem.appendChild (brand_img_elem)
+    }
+    brand_elem.appendChild (brand_details_elem)
+
+    // Add brand tags to grid 
+    brand_wrapper.appendChild(brand_elem)
 
     // Hide loading icon
     loading_products.classList.add ("hide")
@@ -182,7 +183,7 @@ async function create_products (brand="") {
 }
 
 // Load default products
-create_products (brand="")
+create_products ()
 
 
 show_all_button.addEventListener ("click", async function (e) {

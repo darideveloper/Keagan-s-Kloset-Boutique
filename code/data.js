@@ -24,6 +24,10 @@ const data = [
 ]
 
 const brands = {
+    "ALL": {
+        "details": "You may complete your purchase by e-mailing us with the size you want. <br> We will send a link via papal with your invoice.",
+        "img": ""
+    },
     "Pete & Lucy": {
         "details": "Pete + Lucy is not your traditional clothing line. The styles produced are only printed in limited runs.Less than 1,000 of each outfit will ever be made! This makes each and every item a hot commodity! They're high quality, super soft, and super adorable. Every week new patterns are released. Be sure to visit us on FB every weekend to take a look at new releases and place your orders!",
         "img": "pete_lucy.png"
