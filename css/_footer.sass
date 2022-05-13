@@ -1,0 +1,102 @@
+#footer
+    background-color: $color_b
+    color: rgba($color_a, 0.8)
+
+    a, p
+        font-size: 14px
+        color: rgba($color_a, 0.8)
+    a
+        margin-top: 10px
+        display: inline-block
+
+        &:hover
+            opacity: 0.5
+
+    .content
+
+        .widgets
+            width: 80%
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            padding-top: 50px
+            margin: 0 auto
+
+            .widget
+
+                h3
+                    text-align: center
+
+                &.logo
+                    width: 40%
+
+                    img
+                        width: 100px
+                        height: auto
+
+                &.menu
+                    width: 25%
+
+                    ul
+                        margin: 0
+                        padding: 0
+
+                        li
+                            list-style: none
+                            text-align: center
+
+                
+                &.contact
+                    width: 25%
+
+                    a
+                        display: block
+                        text-align: center
+
+
+                    .socials
+                        display: flex 
+                        align-items: center
+                        justify-content: center
+
+
+    small
+        text-align: center
+        padding: 20px 0
+        margin: 0
+        display: block
+        opacity: 0.5
+
+        p, a
+            font-size: 12px
+            display: inline-block
+            margin: 0
+            text-align: center
+
+    @media screen and (max-width: 1200px)
+        .content
+            .widgets
+                .widget
+
+                    &.logo
+                        width: 40%
+
+                    &.menu
+                        width: 15%
+                    
+                    &.contact
+                        width: 35%
+
+    @media screen and (max-width: 900px)
+        .content
+            .widgets
+                flex-direction: column 
+
+                .widget.logo, .widget.menu, .widget.contact
+                    width: 100%
+                    margin-bottom: 20px 
+
+                .widget.logo
+                    order: 2
+                    text-align: center
+                    margin-bottom: 0

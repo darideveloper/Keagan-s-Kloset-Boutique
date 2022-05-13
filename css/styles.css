@@ -5,6 +5,7 @@
 html {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -122,7 +123,7 @@ h2 {
   .header .content nav {
     position: fixed;
     top: 0;
-    right: -350px;
+    right: -400px;
     height: 100vh;
     padding: 0 50px;
     transition-duration: 0.5s;
@@ -246,6 +247,101 @@ h2 {
   }
 }
 
+#footer {
+  background-color: #1b191a;
+  color: rgba(243, 243, 243, 0.8);
+}
+#footer a, #footer p {
+  font-size: 14px;
+  color: rgba(243, 243, 243, 0.8);
+}
+#footer a {
+  margin-top: 10px;
+  display: inline-block;
+}
+#footer a:hover {
+  opacity: 0.5;
+}
+#footer .content .widgets {
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+#footer .content .widgets .widget h3 {
+  text-align: center;
+}
+#footer .content .widgets .widget.logo {
+  width: 40%;
+}
+#footer .content .widgets .widget.logo img {
+  width: 100px;
+  height: auto;
+}
+#footer .content .widgets .widget.menu {
+  width: 25%;
+}
+#footer .content .widgets .widget.menu ul {
+  margin: 0;
+  padding: 0;
+}
+#footer .content .widgets .widget.menu ul li {
+  list-style: none;
+  text-align: center;
+}
+#footer .content .widgets .widget.contact {
+  width: 25%;
+}
+#footer .content .widgets .widget.contact a {
+  display: block;
+  text-align: center;
+}
+#footer .content .widgets .widget.contact .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer small {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  display: block;
+  opacity: 0.5;
+}
+#footer small p, #footer small a {
+  font-size: 12px;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  #footer .content .widgets .widget.logo {
+    width: 40%;
+  }
+  #footer .content .widgets .widget.menu {
+    width: 15%;
+  }
+  #footer .content .widgets .widget.contact {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #footer .content .widgets {
+    flex-direction: column;
+  }
+  #footer .content .widgets .widget.logo, #footer .content .widgets .widget.menu, #footer .content .widgets .widget.contact {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #footer .content .widgets .widget.logo {
+    order: 2;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
 .btn {
   cursor: pointer;
   background: none;
@@ -306,6 +402,17 @@ h2 {
   width: 35px;
   height: 35px;
   transform: rotateZ(270deg);
+}
+.btn.social {
+  padding: 10px 20px;
+}
+.btn.social svg {
+  fill: #f3f3f3;
+  width: 15px;
+  height: 15px;
+}
+.btn.social:hover {
+  opacity: 0.5;
 }
 
 .buy {
