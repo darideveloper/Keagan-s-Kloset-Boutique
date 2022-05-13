@@ -872,21 +872,21 @@ h2 {
 }
 .register .content form input {
   font-size: 18px;
-  padding: 15px 40px;
+  padding: 14px 40px;
   margin: 0;
   border: 2px solid #9c8860;
   transition-duration: 0.0625s;
 }
-.register .content form input[type=text] {
+.register .content form input[type=email] {
   border-right: 0;
 }
-.register .content form input[type=text]:focus {
+.register .content form input[type=email]:focus {
   border-right: 0 !important;
 }
 .register .content form input:focus {
   outline: none;
   border: 4px solid #9c8860;
-  padding: 13px 38px;
+  padding: 12px 38px;
 }
 .register .content .thanks {
   display: none;
