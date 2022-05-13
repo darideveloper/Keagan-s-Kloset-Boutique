@@ -290,6 +290,13 @@ h2 {
   height: 35px;
   transform: rotateZ(270deg);
 }
+.btn.cta-link.face svg {
+  transform: rotateZ(0deg);
+}
+.btn.cta-link.face:hover svg {
+  transform: rotateZ(0deg);
+  transform: scale(1.05);
+}
 .btn.slider svg {
   width: 30px;
   height: 30px;
@@ -705,8 +712,11 @@ h2 {
   }
 }
 
-.register .content {
+.register {
   padding-bottom: 100px;
+}
+.register .content {
+  padding-bottom: 50px;
   text-align: center;
 }
 .register .content h2, .register .content p {
@@ -736,6 +746,31 @@ h2 {
 }
 .register .content .thanks {
   display: none;
+}
+.register .content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.register .content a p {
+  margin: 0;
+  padding-top: 20px;
+}
+.register .content a svg {
+  padding-top: 20px;
+  margin-left: 15px;
+}
+@media screen and (max-width: 900px) {
+  .register .content a svg {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .register .content a p {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 550px) {
   .register .content form {

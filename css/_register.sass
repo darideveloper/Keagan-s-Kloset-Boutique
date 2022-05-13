@@ -1,7 +1,8 @@
 .register
+    padding-bottom: 100px
 
     .content
-        padding-bottom: 100px
+        padding-bottom: 50px
         text-align: center
 
         h2, p
@@ -31,6 +32,32 @@
 
         .thanks
             display: none
+
+        a
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 90%
+            margin: 0 auto
+
+            p
+                margin: 0
+                padding-top: 20px
+
+            svg
+                padding-top: 20px
+                margin-left: 15px
+
+        @media screen and (max-width: 900px)
+            a
+                svg
+                    display: none
+
+        @media screen and (max-width: 650px)
+            a
+                p
+                    font-size: 14px
+
 
         @media screen and (max-width: 550px)
             form
