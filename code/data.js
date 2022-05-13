@@ -34,6 +34,8 @@ const brands = {
     }
 }
 
+const best_products = ["k009", "kal005"]
+
 async function get_products_all () {
     await sleep (1)
     return data
@@ -61,4 +63,20 @@ async function get_brands () {
     }
     await sleep (1)
     return brands 
+}
+
+async function get_best_products () {
+    let best_products_data = []
+    for (let product_id of best_products) {
+        // Get best products data
+        for (product of data) {
+            if (product[0] == product_id) {
+
+                // Save product data
+                best_products_data.push (product)
+            }
+        }
+    }
+    await sleep (1)
+    return best_products_data
 }

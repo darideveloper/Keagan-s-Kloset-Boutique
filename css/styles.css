@@ -451,6 +451,16 @@ h1 {
   width: 80%;
   margin: 0 auto;
 }
+.best .products.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.best .products .loading {
+  margin: 0 auto;
+  width: 100px;
+  height: auto;
+}
 .best .products .product {
   display: flex;
   align-items: center;
