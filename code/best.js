@@ -1,4 +1,5 @@
-const best_products_wrapper = document.querySelector('#best .products');
+const best_products_wrapper = document.querySelector('#best .products')
+const cta_link_arrow = document.querySelector('.cta-link-arrow')
 
 async function show_best_products () {
 
@@ -8,8 +9,13 @@ async function show_best_products () {
     best_products_wrapper.classList.remove ("flex")
     best_products_wrapper.innerHTML = ""
 
+    
     // Generate best products tags
     for (best_product of best_products_data) {
+        // Copy link svg 
+        let cta_link_arrow_copy = cta_link_arrow.cloneNode(deep=true)
+        cta_link_arrow_copy.classList.remove ("hide")
+        
         // Create tags
         let product_elem = document.createElement ("div")
         let wrapper_img_elem = document.createElement("div")
@@ -20,7 +26,6 @@ async function show_best_products () {
         let button_elem = document.createElement("button")
         let p_button_elem = document.createElement("p")
         let svg_elem = document.createElement("svg")
-        let use_elem = document.createElement("use")
     
         // Update attribs
         product_elem.classList.add ("product")
@@ -34,13 +39,11 @@ async function show_best_products () {
         button_elem.classList.add ("btn")
         button_elem.classList.add ("cta-link")
         p_button_elem.innerHTML = "SHOP NOW"
-        use_elem.setAttribute ("xlink:href", "#svg-arrow")
     
         // Nest elements
         wrapper_img_elem.appendChild (img_elem)
-        svg_elem.appendChild (use_elem)
         button_elem.appendChild (p_button_elem)
-        button_elem.appendChild (svg_elem)
+        button_elem.appendChild (cta_link_arrow_copy)
         details_elem.appendChild (h2_elem)
         details_elem.appendChild (p_brand_element)
         details_elem.appendChild (button_elem)

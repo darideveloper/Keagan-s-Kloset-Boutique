@@ -1,5 +1,7 @@
 .btn
     cursor: pointer
+    background: none
+    border: none
 
     &.cta
         background-color: $color_c_2
@@ -17,8 +19,6 @@
             
 
     &.category
-        background: none
-        border: none
         border-bottom: 4px solid rgba($color_d_2, 0)
         color: $color_d_2
         transition-duration: $transition-duration
@@ -30,10 +30,10 @@
             border-bottom: 4px solid rgba($color_d_2, 0.5)
 
     &.cta-link
-        background: none
-        border: none
-
         svg
+            width: 30px 
+            height: 30px
+            transform: rotateZ(180deg)
             transition-duration: $transition-duration
 
         &:hover
@@ -41,6 +41,21 @@
                 text-decoration: underline
 
             svg
-                width: 35px !important
-                height: 35px !important
-                transform: rotateZ(270deg) !important
+                width: 35px
+                height: 35px
+                transform: rotateZ(270deg)
+
+    &.slider
+        svg
+            width: 30px 
+            height: 30px
+            transition-duration: $transition-duration
+
+        &:hover
+            svg
+                width: 35px
+                height: 35px
+                transform: rotateZ(270deg)
+
+
+

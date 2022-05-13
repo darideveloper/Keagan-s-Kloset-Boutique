@@ -1,0 +1,128 @@
+.testimonials
+    background-color: white
+    position: relative
+
+    .buttons
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        height: 100%
+
+        button
+            position: absolute
+            z-index: 1
+            top: 0
+            bottom: 0
+
+            &.back    
+                left: 0
+                margin-left: 50px
+
+                svg
+                    transform: rotateZ(-90deg)
+
+            &.next
+                right: 0
+                margin-right: 50px
+
+                svg
+                    transform: rotateZ(90deg)
+
+    .content
+        background-color: $color_a
+
+        article
+            display: none 
+            width: 100vw
+            align-items: center
+            justify-content: space-between
+            width: 80%
+            padding: 50px 0
+            margin: auto
+
+            &.active 
+                display: flex
+        
+            .titles
+                width: 250px
+                text-align: center
+                
+                h3
+                    font-size: 30px
+                    margin-bottom: 0
+                
+                h4
+                    margin-top: 5px
+
+            .wrapper-img
+                width: 150px
+                height: auto
+                overflow: hidden
+                border-radius: 15px
+
+                img
+                    width: 100%
+                    height: auto
+            
+            .text
+                width: calc(100% - 200px - 250px)
+
+    @media screen and (max-width: 1200px)
+        .buttons
+
+            button
+ 
+                &.back    
+                    margin-left: 25px
+
+                &.next
+                    margin-right: 25px
+
+    @media screen and (max-width: 900px)
+
+        .content
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: flex-end
+
+            article
+                flex-direction: column
+                width: 100%
+                margin-left: 280px
+                margin-right: 100px
+            
+                .wrapper-img
+                    position: absolute
+                    left: 100px
+                    top: 0
+                    bottom: 0
+
+                .titles, .text
+                    width: 100%
+
+    @media screen and (max-width: 700px)
+
+        .buttons
+
+            button
+ 
+                &.back    
+                    margin-left: 10px
+
+                &.next
+                    margin-right: 10px
+    
+        .content
+            justify-content: center
+
+            article
+                width: 80%
+                margin: 0
+            
+                .wrapper-img
+                    position: initial
+
+        
+                    

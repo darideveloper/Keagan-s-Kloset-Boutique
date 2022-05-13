@@ -240,6 +240,8 @@ h1 {
 
 .btn {
   cursor: pointer;
+  background: none;
+  border: none;
 }
 .btn.cta {
   background-color: #801f22;
@@ -256,8 +258,6 @@ h1 {
   color: #801f22;
 }
 .btn.category {
-  background: none;
-  border: none;
   border-bottom: 4px solid rgba(68, 131, 0, 0);
   color: #448300;
   transition-duration: 0.5s;
@@ -268,20 +268,29 @@ h1 {
 .btn.category:hover:not(.active) {
   border-bottom: 4px solid rgba(68, 131, 0, 0.5);
 }
-.btn.cta-link {
-  background: none;
-  border: none;
-}
 .btn.cta-link svg {
+  width: 30px;
+  height: 30px;
+  transform: rotateZ(180deg);
   transition-duration: 0.5s;
 }
 .btn.cta-link:hover p {
   text-decoration: underline;
 }
 .btn.cta-link:hover svg {
-  width: 35px !important;
-  height: 35px !important;
-  transform: rotateZ(270deg) !important;
+  width: 35px;
+  height: 35px;
+  transform: rotateZ(270deg);
+}
+.btn.slider svg {
+  width: 30px;
+  height: 30px;
+  transition-duration: 0.5s;
+}
+.btn.slider:hover svg {
+  width: 35px;
+  height: 35px;
+  transform: rotateZ(270deg);
 }
 
 .buy {
@@ -447,6 +456,9 @@ h1 {
   }
 }
 
+.best {
+  padding-bottom: 100px;
+}
 .best .products {
   width: 80%;
   margin: 0 auto;
@@ -495,9 +507,6 @@ h1 {
   line-height: 15px;
 }
 .best .products .product .details button svg {
-  width: 30px;
-  height: 30px;
-  transform: rotateZ(180deg);
   margin-left: 30px;
 }
 .best .products .product:nth-child(1) {
@@ -555,6 +564,126 @@ h1 {
     margin: 0;
     width: 100%;
     height: auto;
+  }
+}
+
+.testimonials {
+  background-color: white;
+  position: relative;
+}
+.testimonials .buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+.testimonials .buttons button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+}
+.testimonials .buttons button.back {
+  left: 0;
+  margin-left: 50px;
+}
+.testimonials .buttons button.back svg {
+  transform: rotateZ(-90deg);
+}
+.testimonials .buttons button.next {
+  right: 0;
+  margin-right: 50px;
+}
+.testimonials .buttons button.next svg {
+  transform: rotateZ(90deg);
+}
+.testimonials .content {
+  background-color: #f3f3f3;
+}
+.testimonials .content article {
+  display: none;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 50px 0;
+  margin: auto;
+}
+.testimonials .content article.active {
+  display: flex;
+}
+.testimonials .content article .titles {
+  width: 250px;
+  text-align: center;
+}
+.testimonials .content article .titles h3 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.testimonials .content article .titles h4 {
+  margin-top: 5px;
+}
+.testimonials .content article .wrapper-img {
+  width: 150px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.testimonials .content article .wrapper-img img {
+  width: 100%;
+  height: auto;
+}
+.testimonials .content article .text {
+  width: calc(100% - 200px - 250px);
+}
+@media screen and (max-width: 1200px) {
+  .testimonials .buttons button.back {
+    margin-left: 25px;
+  }
+  .testimonials .buttons button.next {
+    margin-right: 25px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .testimonials .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .testimonials .content article {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 280px;
+    margin-right: 100px;
+  }
+  .testimonials .content article .wrapper-img {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+  }
+  .testimonials .content article .titles, .testimonials .content article .text {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .testimonials .buttons button.back {
+    margin-left: 10px;
+  }
+  .testimonials .buttons button.next {
+    margin-right: 10px;
+  }
+  .testimonials .content {
+    justify-content: center;
+  }
+  .testimonials .content article {
+    width: 80%;
+    margin: 0;
+  }
+  .testimonials .content article .wrapper-img {
+    position: initial;
   }
 }
 
