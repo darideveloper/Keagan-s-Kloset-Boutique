@@ -1,6 +1,6 @@
 .client
     margin-top: 50px
-    margin-bottom: -150px
+    margin-bottom: -100px
 
     form
         display: grid
@@ -23,3 +23,45 @@
             grid-row-start: 3
             grid-row-end: 3
             width: 200px
+
+        @media screen and (max-width: 750px)
+            grid-template-columns: repeat(2, 1fr)
+
+            label.comments
+                grid-column-start: 1
+                grid-column-end: 3
+                grid-row-start: 3
+                grid-row-end: 4
+
+                textarea
+                    height: 117px
+
+
+            input.btn
+                grid-column-start: 1
+                grid-column-end: 3
+                grid-row-start: 4
+                grid-row-end: 5
+                width: 200px
+
+        @media screen and (max-width: 500px)
+            grid-template-columns: repeat(1, 1fr)
+
+            label.comments
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: auto
+                grid-row-end: auto
+
+                textarea
+                    height: 117px
+
+
+            input.btn
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: auto
+                grid-row-end: auto
+                width: 200px
+
+

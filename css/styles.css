@@ -67,7 +67,7 @@ h1 {
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .paralax {
@@ -191,6 +191,7 @@ textarea {
   }
   .header .content nav ul li a {
     margin: 0;
+    padding: 0;
     font-size: 30px;
     line-height: 80px;
   }
@@ -999,10 +1000,29 @@ textarea {
 .product-main form p.total span {
   font-weight: bold;
 }
+@media screen and (max-width: 750px) {
+  .product-main {
+    flex-direction: column;
+  }
+  .product-main img, .product-main form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .product-main form .size-quantity {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 400px) {
+  .product-main form .size-quantity label {
+    width: 70%;
+  }
+}
 
 .client {
   margin-top: 50px;
-  margin-bottom: -150px;
+  margin-bottom: -100px;
 }
 .client form {
   display: grid;
@@ -1024,6 +1044,48 @@ textarea {
   grid-row-start: 3;
   grid-row-end: 3;
   width: 200px;
+}
+@media screen and (max-width: 750px) {
+  .client form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .client form label.comments {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .client form label.comments textarea {
+    height: 117px;
+  }
+  .client form input.btn {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .client form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .client form label.comments {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: auto;
+    grid-row-end: auto;
+  }
+  .client form label.comments textarea {
+    height: 117px;
+  }
+  .client form input.btn {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: auto;
+    grid-row-end: auto;
+    width: 200px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
