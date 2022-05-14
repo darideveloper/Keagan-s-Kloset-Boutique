@@ -1,0 +1,25 @@
+.client
+    margin-top: 50px
+    margin-bottom: -150px
+
+    form
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 20px
+
+        label.comments
+            grid-column-start: 3
+            grid-column-end: 3
+            grid-row-start: 1
+            grid-row-end: 3
+
+            textarea
+                height: 117px
+
+
+        input.btn
+            grid-column-start: 1
+            grid-column-end: 4
+            grid-row-start: 3
+            grid-row-end: 3
+            width: 200px

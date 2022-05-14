@@ -12,8 +12,12 @@
         transition-duration: $transition-duration
         font-weight: bold
         font-size: 18px
-        
-        &:hover
+
+        &.disabled
+            opacity: 0.5
+            cursor: not-allowed
+
+        &:hover:not(.disabled)
             background-color: rgba($color_b, 0)
             color: $color_c
             

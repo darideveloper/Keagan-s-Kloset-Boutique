@@ -13,29 +13,13 @@
             margin-bottom: 0
         
         form
-            display: flex
-            align-items: center
-            justify-content: center
-            margin-top: 30px
-
             input 
-                font-size: 18px
-                padding: 14px 40px
-                margin: 0
-                border: 2px solid $color_c
-                transition-duration: calc($transition-duration / 8)
-
                 &[type="email"]
-                    border-right: 0
+                    border-right: 0 !important
+                    margin-right: -5px
 
                     &:focus
-                        border-right: 0 !important 
-
-                &:focus
-                    outline: none
-                    border: 4px solid $color_c
-                    padding: 12px 38px
-
+                        border-right: 0 !important
 
         .thanks
             display: none

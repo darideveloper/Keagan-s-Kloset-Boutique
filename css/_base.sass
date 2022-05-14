@@ -76,3 +76,41 @@ h2
 
 .color-a
     background-color: $color_a
+
+select
+    cursor: pointer
+
+input, select, textarea
+    font-size: 18px
+    padding: 5px 20px
+    margin: 0
+    border: 2px solid $color_c
+    transition-duration: calc($transition-duration / 4)
+
+    &:focus
+        outline: none
+        border: 4px solid $color_c
+        padding: 3px 18px
+
+    &.big
+        padding: 14px 40px !important
+
+        &:focus
+            padding: 12px 38px !important
+
+label:hover
+    font-weight: bold
+
+label, p, input.full-width, select, textarea
+    display: block
+
+label, p
+    margin-bottom: 18px
+    margin-top: 0
+
+input.full-width, select, textarea
+    margin-top: 5px
+    width: calc(100% - 40px)
+
+textarea
+    resize: none
