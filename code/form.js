@@ -9,7 +9,14 @@ const input_pc = document.querySelector ("#pc")
 const input_address = document.querySelector ("#address")
 const input_comments = document.querySelector ("#comments")
 
-// Delete comments default text
+const total_elem = document.querySelector ("p.total > span")
+
+// Dont submit product form
+form_product.addEventListener ("submit", function (e) {
+    e.preventDefault()
+})
+
+// Update comments default text
 var comments_updated = false
 var comments_text = ""
 input_comments.addEventListener ("focus", function () {
@@ -26,3 +33,13 @@ input_comments.addEventListener ("blur", function () {
         input_comments.value = comments_text
     }
 })
+
+// Update total
+input_quantity.addEventListener ("change", function (e) {
+    update_total_price ()
+})
+
+function update_total_price () {
+    let total = parseFloat(product_price) * parseFloat(input_quantity.value) + " USD"
+    total_elem.innerHTML = total
+}

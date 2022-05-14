@@ -5,6 +5,15 @@ const product_price_elem = document.querySelector (".product-main h3")
 const product_img_elem = document.querySelector (".product-main > .content img")
 const product_loading_elem = document.querySelector (".product-main img.loading")
 
+
+var product_code
+var product_brand
+var product_name
+var product_price
+var product_image
+var product_sizes
+var product_details
+
 async function show_product () {
 
     // Get product code from url
@@ -27,12 +36,12 @@ async function show_product () {
 
     // get product data
     product_code = product_code.toUpperCase()
-    let product_brand = product[1]
-    let product_name = product[2]
-    let product_price = product[3] + " USD"
-    let product_image = product[4]
-    let product_sizes = product[5]
-    let product_details = product_brand + " (" + product_code + ")"
+    product_brand = product[1]
+    product_name = product[2]
+    product_price = product[3] + " USD"
+    product_image = product[4]
+    product_sizes = product[5]
+    product_details = product_brand + " (" + product_code + ")"
 
     // Update general data in page
     product_name_elem.innerHTML = product_name
@@ -52,8 +61,8 @@ async function show_product () {
             input_sizes.appendChild (size_elem)
         }
     } else {
-        // Disable sizes select
-        input_sizes.parentNode.classList.add ("hide")
+        // Remove sizes select
+        input_sizes.parentNode.parentNode.removeChild (input_sizes.parentNode)
 
         // Update comments text
         input_comments.innerHTML = "Type your comments and product size here..."
@@ -63,6 +72,8 @@ async function show_product () {
     let image_url = "../imgs/products/full-size/" + product_image
     product_img_elem.setAttribute ("src", image_url)
 
+    // Update total
+    update_total_price ()
 
     // Show product data
     product_loading_elem.classList.add ("hide")
