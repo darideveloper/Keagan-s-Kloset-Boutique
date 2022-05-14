@@ -35,6 +35,10 @@ const brands = {
     "AnnLoren": {
         "details": "AnnLoren designs consist of unique, yet modern-trendy styles for girls as young as 6 months & all the way up to 14 years old! If you seek high-end styles at great prices, look no farther! Designer Girls and Dolls clothing that is affordable and stylish. Designed by twin sisters who are also moms!",
         "img": "annloren.png"
+    },
+    "Adorable Sweetness": {
+        "details": "Adorable Sweetness created by a mom who won't settle for any less than an “ Oh my” styles",
+        "img": "adorable_sweetness.png"
     }
 }
 
@@ -83,4 +87,14 @@ async function get_best_products () {
     }
     await sleep (1)
     return best_products_data
+}
+
+async function get_product (code) {
+    for (let product of data) {
+        product_code = product[0]
+        if (product_code == code) {
+            await sleep (1)
+            return product
+        }
+    }
 }
