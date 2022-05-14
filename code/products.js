@@ -140,7 +140,7 @@ async function create_products (brand="ALL") {
         let product_article = document.createElement("article")
         let product_wrapper_img = document.createElement("div")
         let product_img = document.createElement("img")
-        let product_cta = document.createElement("p")
+        let product_cta = document.createElement("a")
         let product_code = document.createElement("p")
         let product_name = document.createElement("p")
         let product_price = document.createElement("p")
@@ -163,6 +163,11 @@ async function create_products (brand="ALL") {
         product_price.innerHTML = row_price + " USD"
         product_price.classList.add ("details")
         product_price.classList.add ("price")
+
+        // Generate and set product link
+        product_link = "./product/?code=" + row_code
+        product_cta.setAttribute ("href", product_link)
+        product_cta.setAttribute ("target", "_blank")
     
         // Show only first four products
         if (products_counter > 4) {

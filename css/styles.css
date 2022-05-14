@@ -108,31 +108,27 @@ input.big:focus, select.big:focus, textarea.big:focus {
   padding: 12px 38px !important;
 }
 
-label:hover {
+form label:hover {
   font-weight: bold;
 }
-label span.error {
+form label span.error {
   margin-top: 5px;
   display: inline-block;
   font-size: 10px;
   color: red;
 }
-
-label, p, input.full-width, select, textarea {
+form label, form p, form input.full-width, form select, form textarea {
   display: block;
 }
-
-label, p {
+form label, form p {
   margin-bottom: 18px;
   margin-top: 0;
 }
-
-input.full-width, select, textarea {
+form input.full-width, form select, form textarea {
   margin-top: 5px;
   width: calc(100% - 40px);
 }
-
-textarea {
+form textarea {
   resize: none;
 }
 
@@ -550,7 +546,6 @@ textarea {
   height: auto;
 }
 .buy .content .products .product {
-  cursor: pointer;
   opacity: 1;
 }
 .buy .content .products .product.transparent {

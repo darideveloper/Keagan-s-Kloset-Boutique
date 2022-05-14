@@ -98,26 +98,27 @@ input, select, textarea
         &:focus
             padding: 12px 38px !important
 
-label
-    &:hover
-        font-weight: bold
+form
+    label
+        &:hover
+            font-weight: bold
 
-    span.error
+        span.error
+            margin-top: 5px
+            display: inline-block
+            font-size: 10px
+            color: red
+
+    label, p, input.full-width, select, textarea
+        display: block
+
+    label, p
+        margin-bottom: 18px
+        margin-top: 0
+
+    input.full-width, select, textarea
         margin-top: 5px
-        display: inline-block
-        font-size: 10px
-        color: red
+        width: calc(100% - 40px)
 
-label, p, input.full-width, select, textarea
-    display: block
-
-label, p
-    margin-bottom: 18px
-    margin-top: 0
-
-input.full-width, select, textarea
-    margin-top: 5px
-    width: calc(100% - 40px)
-
-textarea
-    resize: none
+    textarea
+        resize: none
