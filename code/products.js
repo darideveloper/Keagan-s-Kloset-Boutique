@@ -134,7 +134,7 @@ async function create_products (brand="ALL") {
         let row_name = row[2]
         let row_price = row[3]
         let row_image = row[4]
-        let row_sizes = row[5]
+        let row_size = row[5]
     
         // Create elements
         let product_article = document.createElement("article")

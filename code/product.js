@@ -11,7 +11,7 @@ var product_brand
 var product_name
 var product_price
 var product_image
-var product_sizes
+var product_size
 var product_details
 
 async function show_product () {
@@ -20,6 +20,13 @@ async function show_product () {
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     var product_code = urlParams.get('code')
+    var thanks_name = urlParams.get('thanks')
+
+    // Create alert and redirect to home
+    if (thanks_name) {
+        await Swal.fire('Thanks for your purchase '+ thanks_name +'. We will check the last details by email')
+        window.location.href = ".."
+    }
 
     // redirect to home with incorrect url
     if (!product_code) {
@@ -27,6 +34,7 @@ async function show_product () {
     }
 
     // Get current product from fake api
+    // product_code = "k000"
     product = await get_product (product_code)
 
     // redirect to home with incorrect product code
@@ -43,13 +51,22 @@ async function show_product () {
     product_sizes = product[5]
     product_details = product_brand + " (" + product_code + ")"
 
+    // Update hidden inputs values
+    input_name_hide.value = product_name
+    input_details_hide.value = product_details
+    input_price_hide.value = product_price
+
     // Update general data in page
     product_name_elem.innerHTML = product_name
     product_details_elem.innerHTML = product_details
     product_price_elem.innerHTML = product_price
 
-    // Generate sizes
+    // Generate size
     if (product_sizes.length > 0) {
+
+        // Set value to size hidden input
+        input_size_hide.value = product_sizes[0]
+
         for (let product_size of product_sizes) {
 
             // Generate option element
@@ -58,11 +75,11 @@ async function show_product () {
             size_elem.innerHTML = product_size
 
             // Add to select
-            input_sizes.appendChild (size_elem)
+            input_size.appendChild (size_elem)
         }
     } else {
-        // Remove sizes select
-        input_sizes.parentNode.parentNode.removeChild (input_sizes.parentNode)
+        // Remove size select
+        input_size.parentNode.parentNode.removeChild (input_size.parentNode)
 
         // Update comments text
         input_comments.innerHTML = "Type your comments and product size here..."

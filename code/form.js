@@ -1,7 +1,9 @@
+// Product form
 const form_product = document.querySelector ("form.product-details") 
-const input_sizes = document.querySelector ("#sizes") 
+const input_size = document.querySelector ("#size") 
 const input_quantity = document.querySelector ("#quantity") 
 
+// Client form
 const form_client = document.querySelector ("form.client-details") 
 const input_name = document.querySelector ("#name")
 const input_email = document.querySelector ("#email")
@@ -10,6 +12,16 @@ const input_address = document.querySelector ("#address")
 const input_comments = document.querySelector ("#comments")
 const input_submit = document.querySelector ("input.btn")
 
+// Hidden inputs
+const input_name_hide = document.querySelector ("#name-hide")
+const input_details_hide = document.querySelector ("#details-hide")
+const input_price_hide = document.querySelector ("#price-hide")
+const input_size_hide = document.querySelector ("#size-hide") 
+const input_quantity_hide = document.querySelector ("#quantity-hide") 
+const input_total_hide = document.querySelector ("#total-hide") 
+const input_redirect_hide = document.querySelector ("#redirect")
+
+// Total tag
 const total_elem = document.querySelector ("p.total > span")
 
 // Dont submit product form
@@ -43,6 +55,7 @@ input_quantity.addEventListener ("change", function (e) {
 function update_total_price () {
     let total = parseFloat(product_price) * parseFloat(input_quantity.value) + " USD"
     total_elem.innerHTML = total
+    input_total_hide.value = total
 }
 
 function activate_submit () {
@@ -83,9 +96,17 @@ function validate_input (input_elem, min_lenght) {
 
 }
 
+// Validate user inputs
 input_name.addEventListener ("change", function (e) {
+
+    console.log ("name")
+
     activate_submit ()
     validate_input (input_name, 3)
+
+    // Update redirect link
+    let redirect_link = "https://darihernandez.github.io/Keagan-s-Kloset-Boutique/product/?thanks=" + input_name.value
+    input_redirect_hide.value = redirect_link
 })
 
 input_email.addEventListener ("change", function (e) {
@@ -102,3 +123,13 @@ input_address.addEventListener ("change", function (e) {
     activate_submit ()
     validate_input (input_address, 10)
 })
+
+// Update hidden inputs
+input_size.addEventListener ("change", function (e) {
+    input_size_hide.value = input_size.value
+})
+
+input_quantity.addEventListener ("change", function (e) {
+    input_quantity_hide.value = input_quantity.value
+})
+

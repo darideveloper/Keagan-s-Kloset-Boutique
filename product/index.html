@@ -81,7 +81,7 @@
                         <div class="size-quantity">
                             <label>
                                 Select a size
-                                <select name="sizes" id="sizes" class="sizes" required>
+                                <select name="size" id="size" class="size" required>
                                 </select>
                             </label>
             
@@ -109,11 +109,11 @@
 
         <section id="client" class="client regular-width">
 
-            <form class="client-details">
+            <form class="client-details" action="https://darideveloper.pythonanywhere.com/" method="post">
 
                 <label>
                     Name
-                    <input class="full-width" type="text" name="name" id="name" required pattern=".{3,}">
+                    <input class="full-width" type="text" name="buyer" id="name" required pattern=".{3,}">
                     <span class="error hide"></span>
                 </label>
 
@@ -141,6 +141,24 @@
                 </label>
 
                 <input type="submit" value="Buy by email" class="btn cta full-width disabled" disabled>
+
+                <div class="hide">
+                    <!-- Product general data -->
+                    <input type="text" name="name" id="name-hide" value=""> 
+                    <input type="text" name="details" id="details-hide" value=""> 
+                    <input type="text" name="price" id="price-hide" value=""> 
+
+                    <!-- Product buy data -->
+                    <input type="text" name="size" id="size-hide" value="">
+                    <input type="number" name="quantity" id="quantity-hide" value="1">
+                    <input type="text" name="total" id="total-hide" value="1">
+                
+                    <!-- Api details -->
+                    <input type="text" name="subject" id="subject", value="New sale on your website!">
+                    <input type="text" name="user" id="user" value="keagan_s_kloset_boutique">
+                    <input type="text" name="api_key" id="api_key" value="bb4319fad0d0dd12338df60a339696de">
+                    <input type="text" name="redirect" id="redirect" value="https://darihernandez.github.io/Keagan-s-Kloset-Boutique/product/?thanks">                
+                </div>
             </form>
         </section>
         <section class="buy" id="buy">
