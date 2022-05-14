@@ -111,6 +111,12 @@ input.big:focus, select.big:focus, textarea.big:focus {
 label:hover {
   font-weight: bold;
 }
+label span.error {
+  margin-top: 5px;
+  display: inline-block;
+  font-size: 10px;
+  color: red;
+}
 
 label, p, input.full-width, select, textarea {
   display: block;

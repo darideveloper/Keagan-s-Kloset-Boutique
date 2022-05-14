@@ -113,22 +113,26 @@
 
                 <label>
                     Name
-                    <input class="full-width" type="text" name="name" id="name" required>
+                    <input class="full-width" type="text" name="name" id="name" required pattern=".{3,}">
+                    <span class="error hide"></span>
                 </label>
 
                 <label>
                     Email
-                    <input class="full-width" type="email" name="email" id="email" required>
+                    <input class="full-width" type="email" name="email" id="email" required pattern=".{8,}">
+                    <span class="error hide"></span>
                 </label>
 
                 <label>
                     Postal Code
-                    <input class="full-width" type="number" name="pc" id="pc" required>
+                    <input class="full-width" type="number" name="pc" id="pc" required pattern=".{5,}">
+                    <span class="error hide"></span>
                 </label>
 
                 <label>
                     Address
-                    <input class="full-width" type="text" name="address" id="address" required>
+                    <input class="full-width" type="text" name="address" id="address" required pattern=".{10,}">
+                    <span class="error hide"></span>
                 </label>
 
                 <label class="comments">
@@ -136,7 +140,7 @@
                     <textarea name="comments" id="comments">Type here...</textarea>
                 </label>
 
-                <input type="submit" value="Buy by email" class="btn cta full-width disabled">
+                <input type="submit" value="Buy by email" class="btn cta full-width disabled" disabled>
             </form>
         </section>
         <section class="buy" id="buy">
