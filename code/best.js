@@ -23,8 +23,8 @@ async function show_best_products () {
         let details_elem = document.createElement("div")
         let h2_elem = document.createElement("h2")
         let p_brand_element = document.createElement("p")
-        let button_elem = document.createElement("button")
-        let p_button_elem = document.createElement("p")
+        let link_elem = document.createElement("a")
+        let p_link_elem = document.createElement("p")
         let svg_elem = document.createElement("svg")
     
         // Update attribs
@@ -36,17 +36,22 @@ async function show_best_products () {
         h2_elem.innerHTML = best_product[2]
         p_brand_element.classList.add ("brand")
         p_brand_element.innerHTML = best_product[1]
-        button_elem.classList.add ("btn")
-        button_elem.classList.add ("cta-link")
-        p_button_elem.innerHTML = "SHOP NOW"
-    
+        link_elem.classList.add ("btn")
+        link_elem.classList.add ("cta-link")
+        p_link_elem.innerHTML = "SHOP NOW"
+
+        // Ganarate best product link
+        let link = product_link = "./product/?code=" + best_product[0]
+        link_elem.setAttribute ("href", link)
+        link_elem.setAttribute ("target", "_blank")
+
         // Nest elements
         wrapper_img_elem.appendChild (img_elem)
-        button_elem.appendChild (p_button_elem)
-        button_elem.appendChild (cta_link_arrow_copy)
+        link_elem.appendChild (p_link_elem)
+        link_elem.appendChild (cta_link_arrow_copy)
         details_elem.appendChild (h2_elem)
         details_elem.appendChild (p_brand_element)
-        details_elem.appendChild (button_elem)
+        details_elem.appendChild (link_elem)
         product_elem.appendChild (wrapper_img_elem)
         product_elem.appendChild (details_elem)
 

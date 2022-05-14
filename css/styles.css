@@ -707,7 +707,7 @@ form textarea {
   margin: 0;
   padding: 0 20px;
 }
-.best .products .product .details button {
+.best .products .product .details a.btn {
   display: inline-block;
   display: flex;
   align-items: center;
@@ -715,10 +715,10 @@ form textarea {
   margin: 25px 0;
   padding: 0 20px;
 }
-.best .products .product .details button p {
+.best .products .product .details a.btn p {
   line-height: 15px;
 }
-.best .products .product .details button svg {
+.best .products .product .details a.btn svg {
   margin-left: 30px;
 }
 .best .products .product:nth-child(1) {
