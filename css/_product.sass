@@ -1,58 +1,67 @@
 .product-main
+    margin-top: 50px
     display: flex
     align-items: center
     justify-content: center
-    margin-top: 50px
 
-    img
-        width: 50%
-        height: auto
+    img.loading
+        width: 100px
 
-    form
-        width: 55%
-        margin-left: 50px
+    > .content
 
-        h1
-            margin-bottom: 0
+        display: flex
+        align-items: center
+        justify-content: center
 
-        h2
-            margin: 0
-
-        .size-quantity
-            display: flex
-            align-items: center
-            justify-content: space-between
-
-            label
-                width: 45%
-                margin-left: 0
-                margin-right: 0
-
-                input
-                    width: calc(100% - 40px)
-                
-                select
-                    width: 100%
-        
-        p.total span
-            font-weight: bold
-
-    @media screen and (max-width: 750px)
-        flex-direction: column
-
-        img, form
-            width: 100%
-            margin: 0
-            padding: 0
+        img
+            width: 50%
+            height: auto
 
         form
+            width: 50%
+            margin-left: 50px
+
+            h1
+                margin-bottom: 0
+
+            h2
+                margin: 0
+
             .size-quantity
-                flex-direction: column
-                align-items: flex-start
-    
-    @media screen and (max-width: 400px)
-        form
-            .size-quantity
+                display: flex
+                align-items: center
+                justify-content: space-between
+
                 label
-                    width: 70%
+                    width: 45%
+                    margin-left: 0
+                    margin-right: 0
+
+                    input
+                        width: calc(100% - 40px)
+                    
+                    select
+                        width: 100%
+            
+            p.total span
+                font-weight: bold
+
+        @media screen and (max-width: 750px)
+            flex-direction: column
+
+            img, form
+                width: 100%
+                margin: 0
+                padding: 0
+
+            form
+                .size-quantity
+                    flex-direction: column
+                    align-items: flex-start
+        
+        @media screen and (max-width: 400px)
+            form
+                .size-quantity
+                    label
+                        width: 70%
 

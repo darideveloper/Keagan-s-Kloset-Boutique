@@ -63,43 +63,48 @@
     </header>
 
     <main>
-        <section class="product-main regular-width" id="poduct">
-            <img src="../imgs/products/k001.png" alt="poduct a">
-            
-            <form class="product-details">
-                <h1>Product 1</h1>  
-                <h2>Brand</h2>
-                <h3>10.00 USD</h3>
+        <section class="product-main" id="poduct">
+            <img class="loading" src="../imgs/loading.gif" alt="loading icon">
 
-                <div class="size-quantity">
-                    <label>
-                        Select a size
-                        <select name="" id="sizes" class="sizes" required>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                        </select>
-                    </label>
-    
-                    <label>
-                        Quantity
-                        <input class="full-width" type="number" name="quantity" id="quantity" value="1" required>
-                    </label>
-                </div>
+            <div class="content hide regular-width">
+
+                <img src="../imgs/products/k001.png" alt="poduct a">
                 
-                <p class="total">
-                    Total:
-                    <span>10.00 usd</span>
-                </p>
-
-                <p class="small">
-                    You may complete your purchase by e-mailing us with the size you want.
-                    <br>
-                    We will send a link via papal with your invoice.
-                </p>
-
-            </form>
-
+                <form class="product-details">
+    
+                    <div class="content">
+    
+                        <h1>Loading...</h1>  
+                        <h2>Brand</h2>
+                        <h3>0.00 USD</h3>
+        
+                        <div class="size-quantity">
+                            <label>
+                                Select a size
+                                <select name="" id="sizes" class="sizes" required>
+                                </select>
+                            </label>
+            
+                            <label>
+                                Quantity
+                                <input class="full-width" type="number" name="quantity" id="quantity" value="1" required>
+                            </label>
+                        </div>
+                        
+                        <p class="total">
+                            Total:
+                            <span>10.00 usd</span>
+                        </p>
+        
+                        <p class="small">
+                            You may complete your purchase by e-mailing us with the size you want.
+                            <br>
+                            We will send a link via papal with your invoice.
+                        </p>
+                    </div>
+    
+                </form>
+            </div>
         </section>
 
         <section id="client" class="client regular-width">
@@ -128,7 +133,7 @@
 
                 <label class="comments">
                     Comments
-                    <textarea name="address" id="address">Type here...</textarea>
+                    <textarea name="comments" id="comments">Type here...</textarea>
                 </label>
 
                 <input type="submit" value="Buy by email" class="btn cta full-width disabled">
@@ -243,6 +248,8 @@
     <script type="text/javascript" src="../code/code.js"></script>
     <script type="text/javascript" src="../code/header.js"></script>
     <script type="text/javascript" src="../code/data.js"></script>
+    <script type="text/javascript" src="../code/form.js"></script>
+    <script type="text/javascript" src="../code/product.js"></script>
 
     <!-- Aos imports -->
     <!-- <script type="text/javascript" src="code/aos.js"></script> -->
