@@ -92,10 +92,56 @@ async function get_best_products () {
 
 async function get_product (code) {
     for (let product of data) {
-        product_code = product[0]
+        let product_code = product[0]
         if (product_code == code) {
             await sleep (1)
             return product
         }
+    }
+}
+
+async function get_related_products (code) {
+
+    console.log (code)
+
+    let brand_products = []
+    let current_brand
+
+    // Get brand of the current product
+    for (let product of data) {
+        if (product[0] == code) {
+            current_brand = product[1]
+            break
+        }
+    }
+
+    // Get products from the same brand
+    for (let product of data) {
+        if (product[1] == current_brand) {
+            brand_products.push (product)
+        }
+    }
+
+    // Select and show 4 random products
+    for (let i = 0; i<4; i++) {
+
+        // Get random product
+        let random_index = Math.floor(Math.random() * brand_products.length)
+        let random_product = brand_products[random_index]
+
+        // Remove element from list
+        brand_products = brand_products.filter(item => item !== random_product)
+ 
+        // Render products in page
+        let selector_product = `.products .product:nth-child(${i + 1})`
+        console.log (selector_product)
+        let procuct_elem = document.querySelector (selector_product)
+        procuct_elem.querySelector("p.code").innerHTML = random_product[0]
+        procuct_elem.querySelector("p.name").innerHTML =  `${random_product[2]} (${random_product[1]})`
+        procuct_elem.querySelector("p.price").innerHTML =  `${random_product[3]} USD`
+        procuct_elem.querySelector("img").setAttribute ("src", `../imgs/products/${random_product[4]}`)
+        procuct_elem.querySelector("a").setAttribute ("href", `../product/?code=${random_product[0]}`)
+    
+        
     }
 }
