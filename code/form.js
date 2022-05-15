@@ -109,27 +109,27 @@ input_name.addEventListener ("change", function (e) {
     input_redirect_hide.value = redirect_link
 })
 
-input_email.addEventListener ("change", function (e) {
+input_email.addEventListener ("keyup", function (e) {
     activate_submit ()
     validate_input (input_email, 8)
 })
 
-input_pc.addEventListener ("change", function (e) {
+input_pc.addEventListener ("keyup", function (e) {
     activate_submit ()
     validate_input (input_pc, 5)
 })
 
-input_address.addEventListener ("change", function (e) {
+input_address.addEventListener ("keyup", function (e) {
     activate_submit ()
     validate_input (input_address, 10)
 })
 
 // Update hidden inputs
-input_size.addEventListener ("change", function (e) {
+input_size.addEventListener ("keyup", function (e) {
     input_size_hide.value = input_size.value
 })
 
-input_quantity.addEventListener ("change", function (e) {
+input_quantity.addEventListener ("keyup", function (e) {
     input_quantity_hide.value = input_quantity.value
 })
 
