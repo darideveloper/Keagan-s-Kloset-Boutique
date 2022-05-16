@@ -53,7 +53,8 @@ input_quantity.addEventListener ("change", function (e) {
 })
 
 function update_total_price () {
-    let total = parseFloat(product_price) * parseFloat(input_quantity.value) + " USD"
+    let total_num = parseFloat(product_price) * parseFloat(input_quantity.value)
+    let total = total_num.toFixed(2) + " USD"
     total_elem.innerHTML = total
     input_total_hide.value = total
 }
