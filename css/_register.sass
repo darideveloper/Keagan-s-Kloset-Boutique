@@ -15,11 +15,11 @@
         form
             input 
                 &[type="email"]
-                    border-right: 0 !important
+                    border-right: 0
                     margin-right: -5px
 
                     &:focus
-                        border-right: 0 !important
+                        border-right: 0
 
         .thanks
             display: none
@@ -59,3 +59,11 @@
 
                 input
                     width: calc(90% - 80px)
+
+                    &[type="email"]
+                        border-right: 2px solid $color_c
+                        margin-right: 0
+                        margin-bottom: 10px
+
+                        &:focus
+                            border-right: 4px solid $color_c

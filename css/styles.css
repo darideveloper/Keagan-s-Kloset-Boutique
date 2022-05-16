@@ -616,7 +616,7 @@ form textarea {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
   .buy .content .buttons {
     flex-direction: column;
   }
@@ -917,11 +917,11 @@ form textarea {
   margin-bottom: 0;
 }
 .register .content form input[type=email] {
-  border-right: 0 !important;
+  border-right: 0;
   margin-right: -5px;
 }
 .register .content form input[type=email]:focus {
-  border-right: 0 !important;
+  border-right: 0;
 }
 .register .content .thanks {
   display: none;
@@ -960,6 +960,14 @@ form textarea {
   }
   .register .content form input {
     width: calc(90% - 80px);
+  }
+  .register .content form input[type=email] {
+    border-right: 2px solid #9c8860;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .register .content form input[type=email]:focus {
+    border-right: 4px solid #9c8860;
   }
 }
 
