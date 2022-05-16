@@ -1,6 +1,5 @@
 const data = [
     // Code, brand, name, price, image, sizes
-    ["k000","Pete & Lucy","Short Sleeve Dress","28.00","k001.png", ["S", "M", "L", "XL"]],
     ["k001","Pete & Lucy","Short Sleeve Dress","28.00","k001.png", []],
     ["k002","Pete & Lucy","2 Piece Set","30.00","k002.png", []],
     ["k003","Pete & Lucy","Short Sleeve Dress","28.00","k003.png", []],
@@ -21,7 +20,12 @@ const data = [
     ["kal005","AnnLoren","Flamingo Dress","28.00","kal005.jpeg", []],
     ["kal006","AnnLoren","Baby Girls Jumpsuit","28.00","kal006.jpeg", []],
     ["kal007","AnnLoren","Baby Girls Jumpsuit","28.00","kal007.jpeg", []],
-    ["kal008","AnnLoren","Dress/Legging Set","38.00","kal008.jpeg", []]
+    ["kal008","AnnLoren","Dress/Legging Set","38.00","kal008.jpeg", []],
+    ["AS01", "Adorable Sweetness", "Summer Coral/grey polka dot set", "$23.99", "as01.jpeg", []],
+    ["AS02", "Adorable Sweetness", "Mustard flower set", "30.99", "as02.jpeg", []],
+    ["AS03", "Adorable Sweetness", "Coral crab short set", "19.99", "as03.jpeg", []],
+    ["AS04", "Adorable Sweetness", "Blue 3tiered dress", "25.99", "as04.jpeg", []],
+    ["AS05", "Adorable Sweetness", "Barn flutter set", "30.99", "as05.jpeg", []]
 ]
 
 const brands = {
@@ -38,7 +42,7 @@ const brands = {
         "img": "annloren.png"
     },
     "Adorable Sweetness": {
-        "details": "Adorable Sweetness created by a mom who won't settle for any less than an “ Oh my” styles",
+        "details": "Adorable Sweetness created by a mom who won't settle for any less than an “Oh my” styles",
         "img": "adorable_sweetness.png"
     }
 }
