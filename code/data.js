@@ -21,11 +21,11 @@ const data = [
     ["kal006","AnnLoren","Baby Girls Jumpsuit","28.00","kal006.jpeg", []],
     ["kal007","AnnLoren","Baby Girls Jumpsuit","28.00","kal007.jpeg", []],
     ["kal008","AnnLoren","Dress/Legging Set","38.00","kal008.jpeg", []],
-    ["AS01", "Adorable Sweetness", "Summer Coral/grey polka dot set", "$23.99", "as01.jpeg", []],
-    ["AS02", "Adorable Sweetness", "Mustard flower set", "30.99", "as02.jpeg", []],
-    ["AS03", "Adorable Sweetness", "Coral crab short set", "19.99", "as03.jpeg", []],
-    ["AS04", "Adorable Sweetness", "Blue 3tiered dress", "25.99", "as04.jpeg", []],
-    ["AS05", "Adorable Sweetness", "Barn flutter set", "30.99", "as05.jpeg", []]
+    ["as01", "Adorable Sweetness", "Summer Coral/grey polka dot set", "23.99", "as01.jpeg", []],
+    ["as02", "Adorable Sweetness", "Mustard flower set", "30.99", "as02.jpeg", []],
+    ["as03", "Adorable Sweetness", "Coral crab short set", "19.99", "as03.jpeg", []],
+    ["as04", "Adorable Sweetness", "Blue 3tiered dress", "25.99", "as04.jpeg", []],
+    ["as05", "Adorable Sweetness", "Barn flutter set", "30.99", "as05.jpeg", []]
 ]
 
 const brands = {
@@ -106,15 +106,16 @@ async function get_product (code) {
 
 async function get_related_products (code) {
 
-    console.log (code)
-
+    let random_products = []
     let brand_products = []
     let current_brand
-
+    let current_product
+    
     // Get brand of the current product
     for (let product of data) {
         if (product[0] == code) {
             current_brand = product[1]
+            current_product = product
             break
         }
     }
@@ -126,6 +127,9 @@ async function get_related_products (code) {
         }
     }
 
+    // Renove current product from brand
+    brand_products = brand_products.filter(item => item !== current_product)
+
     // Select and show 4 random products
     for (let i = 0; i<4; i++) {
 
@@ -133,19 +137,12 @@ async function get_related_products (code) {
         let random_index = Math.floor(Math.random() * brand_products.length)
         let random_product = brand_products[random_index]
 
+        // Save
+        random_products.push (random_product)
+
         // Remove element from list
         brand_products = brand_products.filter(item => item !== random_product)
- 
-        // Render products in page
-        let selector_product = `.products .product:nth-child(${i + 1})`
-        console.log (selector_product)
-        let procuct_elem = document.querySelector (selector_product)
-        procuct_elem.querySelector("p.code").innerHTML = random_product[0]
-        procuct_elem.querySelector("p.name").innerHTML =  `${random_product[2]} (${random_product[1]})`
-        procuct_elem.querySelector("p.price").innerHTML =  `${random_product[3]} USD`
-        procuct_elem.querySelector("img").setAttribute ("src", `../imgs/products/${random_product[4]}`)
-        procuct_elem.querySelector("a").setAttribute ("href", `../product/?code=${random_product[0]}`)
-    
-        
     }
+
+    return random_products
 }
