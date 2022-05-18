@@ -100,13 +100,12 @@ function validate_input (input_elem, min_lenght) {
 // Validate user inputs
 input_name.addEventListener ("change", function (e) {
 
-    console.log ("name")
-
     activate_submit ()
     validate_input (input_name, 3)
 
     // Update redirect link
-    let redirect_link = "https://darihernandez.github.io/Keagan-s-Kloset-Boutique/product/?thanks=" + input_name.value
+    let redirect_link = "https://www.keagansklosetboutique.com/product/?thanks=" + input_name.value
+    console.log (redirect_link)
     input_redirect_hide.value = redirect_link
 })
 
