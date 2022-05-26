@@ -21,6 +21,12 @@ const input_quantity_hide = document.querySelector ("#quantity-hide")
 const input_total_hide = document.querySelector ("#total-hide") 
 const input_redirect_hide = document.querySelector ("#redirect")
 
+// Paypal form
+const form_paypal = document.querySelector ("form.paypal") 
+const input_paypal_name = document.querySelector ('input[name="item_name"]')
+const input_paypal_code = document.querySelector ('input[name="item_number"]')
+
+
 // Total tag
 const total_elem = document.querySelector ("p.total > span")
 

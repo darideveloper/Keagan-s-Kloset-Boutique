@@ -96,7 +96,12 @@ async function show_product () {
     product_loading_elem.classList.add ("hide")
     product_wrapper_elem.classList.remove('hide')
 
+    // // Update paypal form
+    // input_paypal_name.value = product_name
+    // input_paypal_code.value = product_code
+
 }
+
 
 show_product ()
 
