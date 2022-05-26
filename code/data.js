@@ -30,7 +30,7 @@ const data = [
     ["as02", "Adorable Sweetness", "Mustard flower set", "30.99", "as02.jpeg", ["4","5","8","10","12"]],
     ["as03", "Adorable Sweetness", "Coral crab short set", "19.99", "as03.jpeg", ["7"]],
     ["as04", "Adorable Sweetness", "Blue 3tiered dress", "25.99", "as04.jpeg", ["3","4","5"]],
-    ["as05", "Adorable Sweetness", "Barn flutter set", "30.99", "as05.jpeg", ["5"]]
+    ["as05", "Adorable Sweetness", "Barn flutter set", "30.99", "as05.jpeg", ["5"]],
 ]
 
 const brands = {

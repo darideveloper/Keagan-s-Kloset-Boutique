@@ -524,9 +524,14 @@ form textarea {
   justify-content: flex-start;
   margin-bottom: 30px;
   width: 100%;
+  flex-wrap: wrap;
 }
 .buy .content .buttons button {
-  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+.buy .content .buttons button:nth-child(2) {
+  margin-left: 0;
 }
 .buy .content .buttons img.loading {
   width: 30px;
