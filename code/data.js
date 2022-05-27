@@ -52,6 +52,20 @@ const brands = {
     }
 }
 
+const new_products = [
+    {
+        "title": "New Pete and Lucy Releases available!",
+        "details": "Orders for these styles are taken through Sunday 5/22 at 9pm and ship within in 5-7 business days.",
+        "products": [
+            ["Pete & Lucy","Short Sleeve Dress","28.00","k001.png"],
+            ["Pete & Lucy","2 Piece Set","30.00","k002.png",],
+            ["Pete & Lucy","Short Sleeve Dress","28.00","k003.png"],
+            ["Pete & Lucy","Short Sleeve Dress","28.00","k004.png"],
+            ["Pete & Lucy","Dress","28.00","k005.png"],
+        ]
+    }
+]
+
 const best_products = ["k009", "kal005"]
 
 async function get_products_all () {

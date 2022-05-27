@@ -1,4 +1,4 @@
-const best_products_wrapper = document.querySelector('#best .products')
+const best_products_wrapper = document.querySelector('#best .products-best')
 const cta_link_arrow = document.querySelector('.cta-link-arrow')
 
 async function show_best_products () {
@@ -28,7 +28,7 @@ async function show_best_products () {
         let svg_elem = document.createElement("svg")
     
         // Update attribs
-        product_elem.classList.add ("product")
+        product_elem.classList.add ("product-best")
         wrapper_img_elem.classList.add ("wrapper-img")
         img_elem.setAttribute ("src", "imgs/products/" + best_product[4])
         img_elem.setAttribute ("alt", "product photo " + best_product[2])
