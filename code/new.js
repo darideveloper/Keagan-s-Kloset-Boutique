@@ -69,7 +69,7 @@ async function show_best_products () {
             product_price.classList.add ("price")
     
             // Generate and set product link
-            product_link = "./product/?code=" + row_code
+            product_link = "./product/?code-new=" + row_code
             product_cta.setAttribute ("href", product_link)
             product_cta.setAttribute ("target", "_blank")
         

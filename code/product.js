@@ -16,11 +16,14 @@ var product_details
 
 async function show_product () {
 
+    let new_product = false
+
     // Get product code from url
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     var product_code = urlParams.get('code')
     var thanks_name = urlParams.get('thanks')
+    var product_new_code = urlParams.get('code-new')
 
     // Create alert and redirect to home
     if (thanks_name) {
@@ -28,14 +31,18 @@ async function show_product () {
         window.location.href = ".."
     }
 
-    // redirect to home with incorrect url
-    if (!product_code) {
+    if (product_code) {
+        product = await get_product (product_code)
+    } else if (product_new_code) {
+        product = await get_new_product (product_new_code)
+        product.push ([])
+        new_product = true
+    } else {
+        // redirect to home with incorrect url
         window.location.href = ".."
+
     }
 
-    // Get current product from fake api
-    // product_code = "k000"
-    product = await get_product (product_code)
 
     // redirect to home with incorrect product code
     if (!product) {
@@ -43,13 +50,13 @@ async function show_product () {
     }
 
     // get product data
-    product_code = product_code.toUpperCase()
+    product_code = product[0]
     product_brand = product[1]
     product_name = product[2]
     product_price = product[3] + " USD"
     product_image = product[4]
     product_sizes = product[5]
-    product_details = product_brand + " (" + product_code + ")"
+    product_details = product_brand
 
     // Update hidden inputs values
     input_name_hide.value = product_name

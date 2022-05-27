@@ -181,3 +181,16 @@ async function get_new_products () {
     await sleep (1)
     return new_products
 }
+
+async function get_new_product (code) {
+    for (let section of new_products) {
+        let products = section["products"]
+        for (let product of products) {
+            let product_code = product[0]
+            if (product_code == code) {
+                await sleep (1)
+                return product
+            }
+        }
+    }
+}
