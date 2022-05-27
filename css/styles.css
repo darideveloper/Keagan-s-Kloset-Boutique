@@ -910,6 +910,23 @@ form textarea {
 .new .content p {
   margin-bottom: 30px;
 }
+.new .content .products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.new .content .products .product {
+  width: 210px;
+}
+@media screen and (max-width: 800px) {
+  .new .content .products {
+    display: grid;
+  }
+  .new .content .products .product {
+    width: 100%;
+  }
+}
 
 .products {
   display: grid;

@@ -13,3 +13,18 @@
 
         p
             margin-bottom: 30px
+
+        .products
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: wrap
+
+            .product
+                width: 210px
+            
+            @media screen and (max-width: 800px)
+                display: grid
+                
+                .product
+                    width: 100%
