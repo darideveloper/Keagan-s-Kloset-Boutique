@@ -57,13 +57,24 @@ const new_products = [
         "title": "New Pete and Lucy Releases available!",
         "details": "Orders for these styles are taken through Sunday 5/22 at 9pm and ship within in 5-7 business days.",
         "products": [
-            ["Pete & Lucy","Short Sleeve Dress","28.00","k001.png"],
-            ["Pete & Lucy","2 Piece Set","30.00","k002.png",],
-            ["Pete & Lucy","Short Sleeve Dress","28.00","k003.png"],
-            ["Pete & Lucy","Short Sleeve Dress","28.00","k004.png"],
-            ["Pete & Lucy","Dress","28.00","k005.png"],
+            ["1","Pete & Lucy","Short Sleeve Dress","28.00","k001.png"],
+            ["2","Pete & Lucy","2 Piece Set","30.00","k002.png",],
+            ["3","Pete & Lucy","Short Sleeve Dress","28.00","k003.png"],
+            ["4","Pete & Lucy","Short Sleeve Dress","28.00","k004.png"],
+            ["5","Pete & Lucy","Dress","28.00","k005.png"],
         ]
-    }
+    },
+    {
+        "title": "New Pete and Lucy 2 Releases available!",
+        "details": "Orders for these styles are taken through Sunday 5/22 at 9pm and ship within in 5-7 business days.",
+        "products": [
+            ["6","Pete & Lucy","Short Sleeve Dress 2","28.00","k001.png"],
+            ["7","Pete & Lucy","2 Piece Set 2","30.00","k002.png",],
+            ["8","Pete & Lucy","Short Sleeve Dress 2","28.00","k003.png"],
+            ["9","Pete & Lucy","Short Sleeve Dress 2","28.00","k004.png"],
+            ["10","Pete & Lucy","Dress 2","28.00 2","k005.png"],
+        ]
+    },
 ]
 
 const best_products = ["k009", "kal005"]
@@ -164,4 +175,9 @@ async function get_related_products (code) {
     }
 
     return random_products
+}
+
+async function get_new_products () {
+    await sleep (1)
+    return new_products
 }
