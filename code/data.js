@@ -35,7 +35,7 @@ const data = [
 
 const brands = {
     "ALL": {
-        "details": "You may complete your purchase by e-mailing us with the size you want. <br> We will send a link via papal with your invoice.",
+        "details": "You may complete your purchase by e-mailing us with the size you want. <br> We will send you a secure link to complete your purchase.",
         "img": ""
     },
     "Pete & Lucy": {
