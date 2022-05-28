@@ -54,27 +54,31 @@ const brands = {
 
 const new_products = [
     {
-        "title": "New Pete and Lucy Releases available!",
-        "details": "Orders for these styles are taken through Sunday 5/22 at 9pm and ship within in 5-7 business days.",
+        "title": "Pete + Lucy Next Week’s Releases‼️",
+        "details": "🧁 Sweet as a cupcake <br> 🐐 fun with goats are the themes‼️ <br> ** Taking orders through Monday 5/30  by 8am⏰ <br> ** Remember when these go, they go‼️ Will not be made again 🤩 <br> Free shipping g on orders of $50 and over",
         "products": [
-            ["1","Pete & Lucy","Short Sleeve Dress","28.00","k001.png"],
-            ["2","Pete & Lucy","2 Piece Set","30.00","k002.png",],
-            ["3","Pete & Lucy","Short Sleeve Dress","28.00","k003.png"],
-            ["4","Pete & Lucy","Short Sleeve Dress","28.00","k004.png"],
-            ["5","Pete & Lucy","Dress","28.00","k005.png"],
+            ["1","Pete & Lucy","Sleeveless dress","27.99","1.png"],
+            ["2","Pete & Lucy","Shorts outfit","29.99","2.png",],
+            ["3","Pete & Lucy","Romper","25.99","3.png"],
+            ["4","Pete & Lucy","Sleeveless dress","27.99","4.png"],
+            ["5","Pete & Lucy","2 piece capri outfit","29.99","5.png"],
+            ["6","Pete & Lucy","Romper","25.99","6.png"],
+            ["7","Pete & Lucy","Sleeveless dress","28.00","7.png"],
+            ["8","Pete & Lucy","2 piece capri outfit","29.99","8.png"],
+            ["9","Pete & Lucy","Romper","25.99","9.png"],
         ]
-    },
-    {
-        "title": "New Pete and Lucy 2 Releases available!",
-        "details": "Orders for these styles are taken through Sunday 5/22 at 9pm and ship within in 5-7 business days.",
-        "products": [
-            ["6","Pete & Lucy","Short Sleeve Dress 2","28.00","k001.png"],
-            ["7","Pete & Lucy","2 Piece Set 2","30.00","k002.png",],
-            ["8","Pete & Lucy","Short Sleeve Dress 2","28.00","k003.png"],
-            ["9","Pete & Lucy","Short Sleeve Dress 2","28.00","k004.png"],
-            ["10","Pete & Lucy","Dress 2","28.00 2","k005.png"],
-        ]
-    },
+    } //,
+    // {
+    //     "title": "New Pete and Lucy 2 Releases available!",
+    //     "details": "Orders for these styles are taken through Sunday 5/22 at 9pm and ship within in 5-7 business days.",
+    //     "products": [
+    //         ["6","Pete & Lucy","Short Sleeve Dress 2","28.00","k001.png"],
+    //         ["7","Pete & Lucy","2 Piece Set 2","30.00","k002.png",],
+    //         ["8","Pete & Lucy","Short Sleeve Dress 2","28.00","k003.png"],
+    //         ["9","Pete & Lucy","Short Sleeve Dress 2","28.00","k004.png"],
+    //         ["10","Pete & Lucy","Dress 2","28.00 2","k005.png"],
+    //     ]
+    // },
 ]
 
 const best_products = ["k009", "kal005"]
