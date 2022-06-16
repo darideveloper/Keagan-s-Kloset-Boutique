@@ -7,7 +7,6 @@ async function show_best_products () {
 
     // Loop for each section
     let new_products_data = await get_new_products()
-    console.log (new_products_data)
     for (let new_products_section of new_products_data) {
 
         // header nodes

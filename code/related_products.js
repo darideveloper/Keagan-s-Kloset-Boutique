@@ -7,8 +7,6 @@ async function show_related_products () {
     const urlParams = new URLSearchParams(queryString)
     let product_code = urlParams.get('code')
     var product_new_code = urlParams.get('code-new')
-    console.log (product_new_code)
-    console.log (related_products_wrapper)
 
     // Hide section when in page its a "new" product
     if (product_new_code) {

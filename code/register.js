@@ -2,7 +2,6 @@ window.addEventListener('locationchange', show_alert)
 
 function show_alert () {
     var url = window.location.href
-    console.log (url)
     if (url.includes("thanks")) {
         
         // Create alert

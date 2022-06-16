@@ -1,3 +1,6 @@
+let api_base = "https://darideveloper.pythonanywhere.com/store-api/keagan/"
+// let api_base = "http://127.0.0.1:8000/"
+
 const data = [
     // Code, brand, name, price, image, sizes
     ["k001","Pete & Lucy","Short Sleeve Dress","28.00","k001.png", ["6-12 months"]],
@@ -84,8 +87,32 @@ const new_products = [
 const best_products = ["k009", "kal005"]
 
 async function get_products_all () {
-    await sleep (1)
-    return data
+
+    // Get data
+    let response = await fetch (`${api_base}`)
+    let response_data = await response.json ()
+
+    // Format data:  Code, brand, name, price, image, sizes
+    let formated_data = []
+    let products_brands = response_data ["regular_products"]
+    for (const products_brand of products_brands) {
+        let brand_name = products_brand["name"]
+
+        let products = products_brand["products"]
+        for (const product of products) {
+            // Get product data
+            product_code = product["code"]
+            product_name = product["name"]
+            product_price = product["price"]
+            product_image = product["image_url"]
+            product_sizes = product["sizes"]
+
+            // Save product data
+            formated_data.push ([product_code, brand_name, product_name, product_price, product_image, product_sizes])
+        }
+    }
+    return formated_data
+
 }
 
 async function get_products_brand (brand="") {
