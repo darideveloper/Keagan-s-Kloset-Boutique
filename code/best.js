@@ -30,7 +30,7 @@ async function show_best_products () {
         // Update attribs
         product_elem.classList.add ("product-best")
         wrapper_img_elem.classList.add ("wrapper-img")
-        img_elem.setAttribute ("src", "imgs/products/" + best_product[4])
+        img_elem.setAttribute ("src", best_product[4])
         img_elem.setAttribute ("alt", "product photo " + best_product[2])
         details_elem.classList.add ("details")
         h2_elem.innerHTML = best_product[2]

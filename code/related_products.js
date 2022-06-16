@@ -24,7 +24,7 @@ async function show_related_products () {
             procuct_elem.querySelector("p.code").innerHTML = related_product[0]
             procuct_elem.querySelector("p.name").innerHTML =  `${related_product[2]} (${related_product[1]})`
             procuct_elem.querySelector("p.price").innerHTML =  `${related_product[3]} USD`
-            procuct_elem.querySelector("img").setAttribute ("src", `../imgs/products/${related_product[4]}`)
+            procuct_elem.querySelector("img").setAttribute ("src", related_product[4])
             procuct_elem.querySelector("a").setAttribute ("href", `../product/?code=${related_product[0]}`)
         }
     }

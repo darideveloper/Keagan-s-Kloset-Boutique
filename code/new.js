@@ -54,7 +54,7 @@ async function show_best_products () {
             // Set content and attributes
             product_article.classList.add ("product")
             product_wrapper_img.classList.add ("wrapper-img")
-            product_img.setAttribute ("src", "imgs/products/" + row_image)
+            product_img.setAttribute ("src", row_image)
             product_img.setAttribute ("alt", "product image:" + row_code + " " + row_brand + " " + row_name)
             product_cta.innerHTML = "Buy Now"
             product_cta.classList.add ("buy-now")

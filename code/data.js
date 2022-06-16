@@ -92,6 +92,9 @@ async function get_products_all () {
     let response = await fetch (`${api_base}`)
     let response_data = await response.json ()
 
+    console.log (response)
+    console.log (response_data)
+
     // Format data:  Code, brand, name, price, image, sizes
     let formated_data = []
     let products_brands = response_data ["regular_products"]
@@ -116,14 +119,28 @@ async function get_products_all () {
 }
 
 async function get_products_brand (brand="") {
-    let valid_products = [] 
-    for (let product of data) {
-        if (product[1] == brand) {
-            valid_products.push (product)
-        }
+    // Get data
+    let url = `${api_base}category-products/${encodeURIComponent(brand)}/`
+    let response = await fetch (url)
+    let response_data = await response.json ()
+    console.log (response_data)
+
+    // Format data
+    let formated_data = []
+    let products = response_data["products"]
+    for (const product of products) {
+        // Get product data
+        product_code = product["code"]
+        product_name = product["name"]
+        product_price = product["price"]
+        product_image = product["image_url"]
+        product_sizes = product["sizes"]
+
+        // Save product data
+        formated_data.push ([product_code, brand, product_name, product_price, product_image, product_sizes])
     }
-    await sleep (1)
-    return valid_products
+
+    return formated_data
 }
 
 async function get_brands () {

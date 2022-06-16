@@ -93,7 +93,7 @@ async function show_product () {
     }
 
     // Update image
-    let image_url = "../imgs/products/full-size/" + product_image
+    let image_url = product_image
     product_img_elem.setAttribute ("src", image_url)
 
     // Update total

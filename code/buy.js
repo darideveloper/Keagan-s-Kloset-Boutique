@@ -102,7 +102,7 @@ async function create_products (brand="ALL") {
     // Create brand tags    
     if (brand_img) {
         var brand_img_elem = document.createElement("img")
-        brand_img_elem.setAttribute ("src", "imgs/brands/" + brand_img)
+        brand_img_elem.setAttribute ("src", brand_img)
         brand_img_elem.setAttribute ("alt", brand + " logo")
     }
 
@@ -147,7 +147,7 @@ async function create_products (brand="ALL") {
         // Set content and attributes
         product_article.classList.add ("product")
         product_wrapper_img.classList.add ("wrapper-img")
-        product_img.setAttribute ("src", "imgs/products/" + row_image)
+        product_img.setAttribute ("src", row_image)
         product_img.setAttribute ("alt", "product image:" + row_code + " " + row_brand + " " + row_name)
         product_cta.innerHTML = "Buy Now"
         product_cta.classList.add ("buy-now")
