@@ -36,24 +36,24 @@ const data = [
     ["as05", "Adorable Sweetness", "Barn flutter set", "30.99", "as05.jpeg", ["5"]],
 ]
 
-const brands = {
-    "ALL": {
-        "details": "You may complete your purchase by e-mailing us with the size you want. <br> We will send you a secure link to complete your purchase.",
-        "img": ""
-    },
-    "Pete & Lucy": {
-        "details": "Pete + Lucy is not your traditional clothing line. The styles produced are only printed in limited runs.Less than 1,000 of each outfit will ever be made! This makes each and every item a hot commodity! They're high quality, super soft, and super adorable. Every week new patterns are released. Be sure to visit us on FB every weekend to take a look at new releases and place your orders!",
-        "img": "pete_lucy.png"
-    },
-    "AnnLoren": {
-        "details": "AnnLoren designs consist of unique, yet modern-trendy styles for girls as young as 6 months & all the way up to 14 years old! If you seek high-end styles at great prices, look no farther! Designer Girls and Dolls clothing that is affordable and stylish. Designed by twin sisters who are also moms!",
-        "img": "annloren.png"
-    },
-    "Adorable Sweetness": {
-        "details": "Adorable Sweetness created by a mom who won't settle for any less than an “Oh my” styles",
-        "img": "adorable_sweetness.png"
-    }
-}
+// const brands = {
+//     "ALL": {
+//         "details": "You may complete your purchase by e-mailing us with the size you want. <br> We will send you a secure link to complete your purchase.",
+//         "img": ""
+//     },
+//     "Pete & Lucy": {
+//         "details": "Pete + Lucy is not your traditional clothing line. The styles produced are only printed in limited runs.Less than 1,000 of each outfit will ever be made! This makes each and every item a hot commodity! They're high quality, super soft, and super adorable. Every week new patterns are released. Be sure to visit us on FB every weekend to take a look at new releases and place your orders!",
+//         "img": "pete_lucy.png"
+//     },
+//     "AnnLoren": {
+//         "details": "AnnLoren designs consist of unique, yet modern-trendy styles for girls as young as 6 months & all the way up to 14 years old! If you seek high-end styles at great prices, look no farther! Designer Girls and Dolls clothing that is affordable and stylish. Designed by twin sisters who are also moms!",
+//         "img": "annloren.png"
+//     },
+//     "Adorable Sweetness": {
+//         "details": "Adorable Sweetness created by a mom who won't settle for any less than an “Oh my” styles",
+//         "img": "adorable_sweetness.png"
+//     }
+// }
 
 const new_products = [
     {
@@ -84,22 +84,50 @@ const new_products = [
     // },
 ]
 
-const best_products = ["k009", "kal005"]
+// const best_products = ["k009", "kal005"]
 
-async function get_products_all () {
 
-    // Get data
+
+var all_products = []
+var brands = {}
+
+
+window.onload = async function() {
+    await set_main_data ()
+    
+    // Buy section: Load default products
+    create_products ()
+    
+    // Buy section: Create brand buttons from buy module
+    create_buttons () 
+}
+
+// Get data from api
+async function set_main_data () {
+    // Update variables "all_products" and "brands" with api data
+
+    // Add brand "ALL"
+    brands["ALL"] =  { 
+        "details": "You may complete your purchase by e-mailing us with the size you want. <br> We will send you a secure link to complete your purchase.",
+        "img": ""
+    }
+
+    // Main api call
     let response = await fetch (`${api_base}`)
     let response_data = await response.json ()
 
-    console.log (response)
-    console.log (response_data)
-
     // Format data:  Code, brand, name, price, image, sizes
-    let formated_data = []
     let products_brands = response_data ["regular_products"]
     for (const products_brand of products_brands) {
+
+        // Save brand data
         let brand_name = products_brand["name"]
+        let brand_details = products_brand["details"]
+        let brand_image = products_brand["image"]
+        brands[brand_name] = {
+            "details": brand_details,
+            "img": brand_image
+        }
 
         let products = products_brand["products"]
         for (const product of products) {
@@ -111,19 +139,25 @@ async function get_products_all () {
             product_sizes = product["sizes"]
 
             // Save product data
-            formated_data.push ([product_code, brand_name, product_name, product_price, product_image, product_sizes])
+            all_products.push ([product_code, brand_name, product_name, product_price, product_image, product_sizes])
         }
     }
-    return formated_data
+}
+
+
+async function get_products_all () {
+
+
+    return all_products
 
 }
 
 async function get_products_brand (brand="") {
+
     // Get data
     let url = `${api_base}category-products/${encodeURIComponent(brand)}/`
     let response = await fetch (url)
     let response_data = await response.json ()
-    console.log (response_data)
 
     // Format data
     let formated_data = []
@@ -144,15 +178,8 @@ async function get_products_brand (brand="") {
 }
 
 async function get_brands () {
+
     // Get product brands
-    let brands = [] 
-    for (row of data) {
-        let brand =  row[1]
-        if (! brands.includes (brand)) {
-            brands.push (brand)
-        }
-    }
-    await sleep (1)
     return brands 
 }
 

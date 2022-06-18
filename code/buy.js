@@ -13,9 +13,14 @@ brand_buttons.push (all_button)
 
 async function create_buttons () {
 
-    // Get brand from fake api 
-    let brands = await get_brands()
-    brands.unshift ("ALL")
+    // Get brand from api 
+    let brands_data = await get_brands ()
+
+    // Get only brands names
+    brands = []
+    for (const brand_name in brands_data) {
+        brands.push (brand_name)
+    }
 
     // Hide loading icon
     loading_buttons.classList.add ("hide")
@@ -78,8 +83,6 @@ async function create_buttons () {
     }
 }
 
-create_buttons () 
-
 async function create_products (brand="ALL") {
 
     // Create all products
@@ -96,6 +99,7 @@ async function create_products (brand="ALL") {
     }
 
     // Get brand data 
+    brands = await get_brands ()
     let brand_details = brands[brand]["details"]
     let brand_img = brands[brand]["img"]
 
@@ -185,10 +189,6 @@ async function create_products (brand="ALL") {
         products_wrapper.appendChild (product_article)
     }
 }
-
-// Load default products
-create_products ()
-
 
 show_all_button.addEventListener ("click", async function (e) {
     // Show products
