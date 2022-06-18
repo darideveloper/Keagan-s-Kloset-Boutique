@@ -62,5 +62,3 @@ async function show_best_products () {
     }
 }
 
-show_best_products ()
-

@@ -1,6 +1,6 @@
 const new_section_wrapper = document.querySelector('#new')
 
-async function show_best_products () {
+async function show_new_products () {
     
     // List to save section nodes
     let section_nodes = []
@@ -98,5 +98,3 @@ async function show_best_products () {
         new_section_wrapper.appendChild (section)
     }
 }
-
-show_best_products ()
