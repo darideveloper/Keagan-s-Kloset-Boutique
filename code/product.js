@@ -109,6 +109,3 @@ async function show_product () {
 
 }
 
-
-show_product ()
-

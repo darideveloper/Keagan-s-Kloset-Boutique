@@ -30,5 +30,3 @@ async function show_related_products () {
     }
 
 }
-
-show_related_products()

@@ -7,19 +7,37 @@ var best_products = []
 
 
 window.onload = async function() {
+
     await set_main_data ()
-    
-    // Buy section: Load default products
-    create_products ()
-    
-    // Buy section: Create brand buttons from buy module
-    create_buttons () 
 
-    // Best section: Show best products
-    show_best_products ()
+    // Get page type from url
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    var product_code = urlParams.get('code')
+    var product_new_code = urlParams.get('code-new')
+    
+    if (product_code || product_new_code) {
+        // Product page
 
-    // New section: Show new products
-    show_new_products ()
+        show_product ()
+        show_related_products()
+
+    } else {
+        // Home page
+
+        // Buy section: Load default products
+        create_products ()
+        
+        // Buy section: Create brand buttons from buy module
+        create_buttons () 
+    
+        // Best section: Show best products
+        show_best_products ()
+    
+        // New section: Show new products
+        show_new_products ()
+    }
+
 }
 
 // Get data from api
@@ -153,7 +171,7 @@ async function get_best_products () {
 }
 
 async function get_product (code) {
-    for (let product of data) {
+    for (let product of all_products) {
         let product_code = product[0]
         if (product_code == code) {
             await sleep (1)
@@ -170,7 +188,7 @@ async function get_related_products (code) {
     let current_product
     
     // Get brand of the current product
-    for (let product of data) {
+    for (let product of all_products) {
         if (product[0] == code) {
             current_brand = product[1]
             current_product = product
@@ -179,7 +197,7 @@ async function get_related_products (code) {
     }
 
     // Get products from the same brand
-    for (let product of data) {
+    for (let product of all_products) {
         if (product[1] == current_brand) {
             brand_products.push (product)
         }
