@@ -228,7 +228,7 @@ async function get_new_products () {
 }
 
 async function get_new_product (code) {
-    for (let section of new_products) {
+    for (let section of new_products_data) {
         let products = section["products"]
         for (let product of products) {
             let product_code = product[0]
