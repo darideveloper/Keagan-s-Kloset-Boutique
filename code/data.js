@@ -16,10 +16,9 @@ window.onload = async function() {
     let product_code = urlParams.get('code')
     let product_new_code = urlParams.get('code-new')
     let done = urlParams.get('done')
-    let error = urlParams.get('error')
 
 
-    if (product_code || product_new_code || done != null || error != null) {
+    if (window.location.href.includes("product")) {
         // Product page
 
         show_product ()

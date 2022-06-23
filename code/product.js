@@ -32,15 +32,6 @@ async function show_product () {
         window.location.href = ".."
     }
 
-    if (error) {
-        await Swal.fire ({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'There was an error in the payment. Try again later'
-        })
-        window.location.href = ".."
-    }
-
     if (product_code) {
         product = await get_product (product_code)
     } else if (product_new_code) {
