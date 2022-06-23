@@ -22,12 +22,22 @@ async function show_product () {
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     var product_code = urlParams.get('code')
-    var thanks_name = urlParams.get('thanks')
+    var done = urlParams.get('done')
+    var error = urlParams.get('error')
     var product_new_code = urlParams.get('code-new')
 
     // Create alert and redirect to home
-    if (thanks_name) {
-        await Swal.fire('Thanks for your purchase '+ thanks_name +'. We will check the last details by email')
+    if (done) {
+        await Swal.fire('Thanks for your purchase!')
+        window.location.href = ".."
+    }
+
+    if (error) {
+        await Swal.fire ({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'There was an error in the payment. Try again later'
+        })
         window.location.href = ".."
     }
 

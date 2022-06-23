@@ -13,10 +13,13 @@ window.onload = async function() {
     // Get page type from url
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
-    var product_code = urlParams.get('code')
-    var product_new_code = urlParams.get('code-new')
-    
-    if (product_code || product_new_code) {
+    let product_code = urlParams.get('code')
+    let product_new_code = urlParams.get('code-new')
+    let done = urlParams.get('done')
+    let error = urlParams.get('error')
+
+
+    if (product_code || product_new_code || done != null || error != null) {
         // Product page
 
         show_product ()
@@ -37,6 +40,7 @@ window.onload = async function() {
         // New section: Show new products
         show_new_products ()
     }
+
 
 }
 

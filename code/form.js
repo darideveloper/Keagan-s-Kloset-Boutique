@@ -108,10 +108,6 @@ input_name.addEventListener ("change", function (e) {
 
     activate_submit ()
     validate_input (input_name, 3)
-
-    // Update redirect link
-    let redirect_link = "https://www.keagansklosetboutique.com/product/?thanks=" + input_name.value
-    input_redirect_hide.value = redirect_link
 })
 
 input_email.addEventListener ("keyup", function (e) {
