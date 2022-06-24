@@ -56,8 +56,10 @@ async function show_product () {
     product_name = product[2]
     product_price = product[3] + " USD"
     product_image = product[4]
-    product_sizes = product[5]
+    product_sizes = product[5].split(",")
     product_details = product_brand
+
+    console.log (product_sizes)
 
     // Update hidden inputs values
     input_name_hide.value = product_name
