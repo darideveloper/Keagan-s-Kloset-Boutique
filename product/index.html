@@ -70,7 +70,7 @@
 
                 <img src="../imgs/products/k001.png" alt="poduct a">
 
-                <form class="product-details">
+                <form class="product-details" action="https://darideveloper.pythonanywhere.com/store-api/keagan/payment/" method="post">
 
                     <div class="content">
 
@@ -104,69 +104,13 @@
                         </p>
                     </div>
 
+                    <input type="hidden" name="code" value="" id="code">
+
+                    <input type="submit" value="Buy" class="btn cta" id="submit">
+
                 </form>
             </div>
         </section>
-
-        <section id="client" class="client regular-width">
-
-            <form class="client-details" action="https://darideveloper.pythonanywhere.com/contactforms-api/" method="post">
-
-                <label>
-                    Name *
-                    <input class="full-width" type="text" name="buyer" id="name" required pattern=".{3,}">
-                    <span class="error hide"></span>
-                </label>
-
-                <label>
-                    Email *
-                    <input class="full-width" type="email" name="email" id="email" required pattern=".{8,}">
-                    <span class="error hide"></span>
-                </label>
-
-                <label>
-                    Postal Code *
-                    <input class="full-width" type="number" name="pc" id="pc" required pattern=".{5,}">
-                    <span class="error hide"></span>
-                </label>
-
-                <label>
-                    Address *
-                    <input class="full-width" type="text" name="address" id="address" required pattern=".{10,}">
-                    <span class="error hide"></span>
-                </label>
-
-                <label class="comments">
-                    Comments
-                    <textarea name="comments" id="comments">Type here...</textarea>
-                </label>
-
-                <input type="submit" value="Buy by email" class="btn cta full-width disabled" disabled>
-
-                <div class="hide">
-                    <!-- Product general data -->
-                    <input type="text" name="name" id="name-hide" value="">
-                    <input type="text" name="details" id="details-hide" value="">
-                    <input type="text" name="price" id="price-hide" value="">
-
-                    <!-- Product buy data -->
-                    <input type="text" name="size" id="size-hide" value="">
-                    <input type="number" name="quantity" id="quantity-hide" value="1">
-                    <input type="text" name="total" id="total-hide" value="1">
-
-                    <!-- Api details -->
-                    <input type="text" name="subject" id="subject" , value="New sale on your website!">
-                    <input type="text" name="user" id="user" value="keagan_s_kloset_boutique">
-                    <input type="text" name="api_key" id="api_key" value="bb4319fad0d0dd12338df60a339696de">
-                    <input type="text" name="redirect" id="redirect"
-                        value="https://www.keagansklosetboutique.com/product/?thanks">
-                </div>
-            </form>
-
-            <!-- Pay button
-            <div>
-                <a target="_blank" data-url="https://square.link/u/xZLnftD2?src=embd" href="https://square.link/u/xZLnftD2?src=embed" class="btn cta">Buy now</a>
-            </div> -->
             
         </section>
         <section class="buy" id="buy">

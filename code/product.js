@@ -23,7 +23,6 @@ async function show_product () {
     const urlParams = new URLSearchParams(queryString)
     var product_code = urlParams.get('code')
     var done = urlParams.get('done')
-    var error = urlParams.get('error')
     var product_new_code = urlParams.get('code-new')
 
     // Create alert and redirect to home
@@ -41,7 +40,6 @@ async function show_product () {
     } else {
         // redirect to home with incorrect url
         window.location.href = ".."
-
     }
 
 
@@ -56,15 +54,11 @@ async function show_product () {
     product_name = product[2]
     product_price = product[3] + " USD"
     product_image = product[4]
-    product_sizes = product[5].split(",")
+    product_sizes = product[5]
     product_details = product_brand
 
-    console.log (product_sizes)
-
-    // Update hidden inputs values
-    input_name_hide.value = product_name
-    input_details_hide.value = product_details
-    input_price_hide.value = product_price
+    // Set product code to hidden input
+    input_code.value = product_code
 
     // Update general data in page
     product_name_elem.innerHTML = product_name
@@ -74,8 +68,7 @@ async function show_product () {
     // Generate size
     if (product_sizes.length > 0) {
 
-        // Set value to size hidden input
-        input_size_hide.value = product_sizes[0]
+        product_sizes = product_sizes.split(",")
 
         for (let product_size of product_sizes) {
 
@@ -87,12 +80,28 @@ async function show_product () {
             // Add to select
             input_size.appendChild (size_elem)
         }
-    } else {
-        // Remove size select
-        input_size.parentNode.parentNode.removeChild (input_size.parentNode)
 
-        // Update comments text
-        input_comments.innerHTML = "Type your comments and product size here..."
+    } else {
+        // Change submit button name
+        input_submit.value = "Preorder now"
+
+        // Create size text input
+        let input_size_text = document.createElement ("input")
+        input_size_text.classList.add ("full-width")
+        input_size_text.setAttribute ("type", "text")
+        input_size_text.setAttribute ("name", "size")
+        input_size_text.setAttribute ("id", "size")
+        input_size_text.setAttribute ("required", "")
+
+        // Update label name
+        label_elem = input_size.parentNode
+        label_elem.innerHTML = "Type a size"
+
+        // Add an input text for size
+        label_elem.appendChild(input_size_text)
+
+        // rename code input
+        input_code.setAttribute ("name", "new-code")
     }
 
     // Update image
