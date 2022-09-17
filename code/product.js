@@ -115,7 +115,7 @@ async function show_product () {
     product_loading_elem.classList.add ("hide")
     product_wrapper_elem.classList.remove('hide')
 
-    temp_hide_form ()
+    // temp_hide_form ()
 
 }
 
