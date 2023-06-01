@@ -52,7 +52,7 @@ The website have the following pages and sections and pages:
 ## All pages
 * Header
 * Footer
-t* Contact info
+	* Contact info
 
 ## Home page
 * Hero images (with call to action and social buttons)
