@@ -47,34 +47,34 @@ Project type: **client's project**
 
 # Details
 
-The website have the following pages and sections and pages:\r
-\r
-## All pages\r
-* Header\r
-* Footer\r
-\t* Contact info\r
-\r
-## Home page\r
-* Hero images (with call to action and social buttons)\r
-* Buy here (with categories)\r
-* Featured items\r
-* Testimonials\r
-* Contact form\r
-\r
-## Buy product page\r
-* Buy form\r
+The website have the following pages and sections and pages:
+
+## All pages
+* Header
+* Footer
+t* Contact info
+
+## Home page
+* Hero images (with call to action and social buttons)
+* Buy here (with categories)
+* Featured items
+* Testimonials
+* Contact form
+
+## Buy product page
+* Buy form
 * Related products
 
 # Roadmap
 
-* [X] 404 page\r
-* [X] Home page\r
-* [X] Product categories\r
-* [X] Stripe payments\r
-* [X] Paralax effect\r
-* [X] Slider\r
-* [X] Contact form\r
-* [X] Related products\r
+* [X] 404 page
+* [X] Home page
+* [X] Product categories
+* [X] Stripe payments
+* [X] Paralax effect
+* [X] Slider
+* [X] Contact form
+* [X] Related products
 * [X] Products with variations
 
 
