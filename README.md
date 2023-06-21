@@ -1,5 +1,5 @@
-<div><a href='https://github.com/github.com/darideveloper/blob/master/LICENSE' target='_blank'>
-            <img src='https://img.shields.io/github/license/github.com/darideveloper.svg?style=for-the-badge' alt='MIT License' height='30px'/>
+<div><a href='https://github.com/darideveloper/Keagan-s-Kloset-Boutique/blob/master/LICENSE' target='_blank'>
+            <img src='https://img.shields.io/github/license/darideveloper/Keagan-s-Kloset-Boutique.svg?style=for-the-badge' alt='MIT License' height='30px'/>
         </a><a href='https://www.linkedin.com/in/francisco-dari-hernandez-6456b6181/' target='_blank'>
                 <img src='https://img.shields.io/static/v1?style=for-the-badge&message=LinkedIn&color=0A66C2&logo=LinkedIn&logoColor=FFFFFF&label=' alt='Linkedin' height='30px'/>
             </a><a href='https://t.me/darideveloper' target='_blank'>
@@ -20,11 +20,7 @@ Visit at: **[darideveloper.github.io/Keagan-s-Kloset-Boutique](https://daridevel
 
 Ecommerce with django backend, for buy children's clothes with variations
 
-Start date: **2022-05-07**
-
-Last update: **2023-05-07**
-
-Project type: **client's project**
+Project type: **client**
 
 </div><br><details>
             <summary>Table of Contents</summary>
@@ -76,5 +72,4 @@ The website have the following pages and sections and pages:
 * [X] Contact form
 * [X] Related products
 * [X] Products with variations
-
 
